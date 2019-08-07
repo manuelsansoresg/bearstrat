@@ -1,0 +1,11 @@
+.btn-outline-secondary {
+    font-family: 'Lato-Regular';
+    color: $yellow-menu;
+    border-color: $yellow-menu;
+    border-radius: 0px;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background-color: $yellow-menu;
+}

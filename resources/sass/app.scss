@@ -1,0 +1,82 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import './fonts';
+
+@import './components/navbar';
+@import './components/buttons';
+@import './components/landing';
+@import './components/replaceText';
+@import './components/footer';
+@import './components/como_trabajamos';
+@import './components/grafica';
+@import './components/nosotros';
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+/*body, html {
+    min-height: 100%;
+    top: 0;
+    margin:0;
+    padding:0;
+}*/
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.hr-gold-vertical{
+  border: 0.5px solid $yellow-menu;
+  height: 90px;
+}
+
+
+.hr-gold{
+    border: 0.5px solid $yellow-menu;
+}
+
+.blue {
+    background-color: #3883d8;
+}
+
+.turqoise {
+    background-color: #38ced7;
+}
+
+.green {
+    background-color: #22d659;
+}
+
+.bordeaux {
+    background-color: #953543;
+}
+
+.LatoItalic{
+  font-family: Lato-Italics;
+}
+
+.LatoBoldItalic{
+    font-family: 'Lato-BoldItalic';
+}
+
+.semicolon{
+    font-family: 'PlayfairDisplay-Bold';
+    color: $yellow-menu;
+    font-size: 3em;
+    position: absolute;
+    margin-top: -22px;
+
+}
+
+.color-yellow{
+    color: $yellow-menu;
+}

@@ -1,0 +1,21 @@
+.footer{
+    background-color: #0B2131;
+    font-family: 'Lato-Regular';
+    color: $yellow-menu;
+    padding: 10px 0px;
+}
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+
+//celular
+@media (max-width: 576px) {
+    .footer{
+        padding: 10px 11px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,485 @@
+.como-trabajamos{
+    background: url("/img/como_trabajamos/Cuadrado_tranding.png") center no-repeat;
+    background-size: cover;
+    height: 80vh;
+
+    &__title{
+        font-family: 'PlayfairDisplay-Regular';
+        color: white;
+        font-size: 3em;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__subtitle{
+        font-family: 'PlayfairDisplay-Regular';
+        color: $yellow-menu;
+        font-size: 5em;
+        margin: 0px;
+        padding: 0px;
+        margin-top: -29px;
+    }
+    &__text{
+        margin-top: 3%;
+    }
+
+    &__description{
+        font-family: 'Lato-Regular';
+        font-size: 1.3em;
+        color: white;
+        margin-top: -11%;
+        width: 36%;
+    }
+
+    &__aligment{
+        margin-top: 3%;
+        &__title{
+            font-family: 'Lato-Bold';
+            color: $blue3;
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+        &__subtitle{
+            font-family: 'Lato-Black';
+            color: $blue3;
+        }
+        &__description{
+            font-family: 'Lato-Regular';
+            color: $blue3;
+            font-size: 1.2em;
+        }
+    }
+
+    &__risk{
+        display: flex;
+        justify-content: space-between;
+        &__left{
+            width: 67%;
+            padding-left: 10%;
+            height: 100vh;
+        }
+
+        &__right{
+            margin-top: 20px;
+        }
+
+        &__right-textOne{
+            padding: 0px 14%;
+            color: $yellow-menu;
+            width: 80%;
+        }
+
+        &__right-textOne-title{
+            font-family: 'Lato-Regular';
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        &__right-textOne-subtitle{
+            font-family: 'Lato-Black';
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        &__right-textOne-description{
+            font-family: 'Lato-Regular';
+            color:$blue;
+        }
+
+        &__right-text{
+            position: absolute;
+            font-family: "Lato-Bold";
+            font-size: 1.8em;
+            margin-top: 6%;
+            margin-left: 11%;
+            color: white;
+            width: 29%;
+            text-align: center;
+        }
+
+    }
+}
+
+.riskManagment{
+    &__text{
+        margin-left: 10px;
+    }
+
+    &__title{
+        font-family: 'Lato-Regular';
+        font-size: 3em;
+        text-transform: uppercase;
+        color: $yellow-menu;
+    }
+
+    &__description{
+        font-family: 'Lato-Regular';
+        color:$blue;
+    }
+
+    &__text-right{
+        margin-top: -60%;
+        font-family: "Lato-Bold";
+        font-size: 1.8em;
+        color:white;
+        left: 10%;
+    }
+
+    &__subtitle{
+        font-family: "Lato-Black";
+        font-size: 3em;
+        text-transform: uppercase;
+        color: $yellow-menu;
+    }
+
+    &__right{
+        margin-left: -8px;
+    }
+}
+
+
+.como-st0{fill:none;stroke:#DBAD46;stroke-width:1.4;stroke-miterlimit:10;}
+.como-st1{fill:#DBAD46;}
+
+.content-block .wrapper {
+    padding: 30px 0;
+    text-align: center;
+}
+.no-touch .content-block.is-active .wrapper {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+#waves {
+    width: 100%;
+    height: 100%;
+    margin-top: -14%;
+}
+
+.slideInUp {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+}
+
+.is-active .slideInUp {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+    .como-trabajamos{
+        height: 40vh;
+        &__description {
+            margin-top: -15%;
+            width: 80%;
+            font-size: 1em;
+        }
+        &__risk{
+            &__left{
+                width: 129%;
+                padding-left: 0%;
+                height: 43vh;
+            }
+            &__right-text{
+                margin-left: 4%;
+                width: 45%;
+                font-size: 1.5em;
+            }
+            &__right-textOne {
+                width: 100%;
+            }
+            &__right-textOne-title{
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+
+            &__right-textOne-subtitle{
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    #waves {
+        margin-top: -22%;
+        width: 108% !important;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .como-trabajamos{
+        height: 62vh;
+        &__aligment{
+            &__title{
+                font-size: 2em;
+            }
+        }
+        &__title{
+            font-size: 2em;
+        }
+        &__subtitle{
+            font-size: 3em;
+            margin-top: -15px;
+        }
+        &__description {
+            margin-top: -37%;
+            width: 92%;
+            font-size: 1em;
+        }
+        &__risk{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            &__left{
+                height: 38vh;
+                width: 100%;
+                padding-left: 0px;
+                margin-top: 20%;
+            }
+            &__right{
+                margin-top: -110px;
+            }
+            &__right-textOne {
+                padding: 0px;
+                margin-left: 5%;
+                width: 90%;
+            }
+            &__right-textOne-title {
+                font-size: 2em;
+            }
+            &__right-textOne-subtitle {
+                font-size: 2em;
+            }
+            &__right-textOne-description{
+                color: white;
+            }
+            &__right-text{
+                margin-left: 0%;
+                width: 100%;
+                margin-top: 45px;
+                font-size: 1em;
+                padding: 0px 10px;
+            }
+        }
+    }
+
+
+    .riskManagment{
+        &__text{
+            margin-left: 0px;
+            margin-top: -82%;
+        }
+
+        &__title{
+            font-family: 'Lato-Regular';
+            font-size: 3em;
+            text-transform: uppercase;
+            color: $yellow-menu;
+        }
+
+        &__description{
+            font-family: 'Lato-Regular';
+            color:white;
+        }
+
+        &__text-right{
+            margin-top: -60%;
+            font-size: 1em;
+            color: white;
+            padding: 0px 30px;
+            left: 0px;
+        }
+
+        &__subtitle{
+            font-family: "Lato-Black";
+            font-size: 3em;
+            text-transform: uppercase;
+            color: $yellow-menu;
+        }
+
+        &__right{
+            margin-left: -8px;
+            img{
+                height: 268px;
+                width: 100%;
+                margin-left: 8px
+            }
+        }
+    }
+
+    #waves {
+        margin-top: -39%;
+
+    }
+}
+
+/*
+@media (max-width: 4096px) {
+    .como-trabajamos{
+        height: 79vh;
+        &__description{
+            width: 57%;
+        }
+
+        &__text {
+            margin-top: 7%;
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .como-trabajamos{
+        height: 79vh;
+        &__text {
+            margin-top: 7%;
+        }
+    }
+
+}
+
+
+//tablets
+@media (max-width: 768px) {
+    .como-trabajamos{
+        height: 40vh;
+        &__description {
+            margin-top: -15%;
+            width: 80%;
+            font-size: 1em;
+        }
+        &__risk{
+            &__left{
+                width: 129%;
+                padding-left: 0%;
+                height: 43vh;
+            }
+            &__right-text{
+                margin-left: 4%;
+                width: 45%;
+                font-size: 1.5em;
+            }
+            &__right-textOne {
+                width: 100%;
+            }
+            &__right-textOne-title{
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+
+            &__right-textOne-subtitle{
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    #waves {
+        margin-top: -22%;
+        width: 108% !important;
+    }
+}
+
+//celular
+@media (max-width: 576px) {
+    .como-trabajamos{
+        height: 60vh;
+        &__title{
+            font-size: 3em;
+        }
+        &__subtitle{
+            font-size: 4em;
+        }
+        &__description {
+            margin-top: -37%;
+            width: 92%;
+            font-size: 1em;
+        }
+        &__risk{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            &__left{
+                height: 38vh;
+            }
+            &__right-textOne-description{
+                color: white;
+            }
+            &__right-text{
+                margin-left: 0%;
+                width: 100%;
+                margin-top: 45px;
+                font-size: 1em;
+                padding: 0px 10px;
+            }
+        }
+    }
+
+
+    .riskManagment{
+        &__text{
+            margin-left: 0px;
+            margin-top: -82%;
+        }
+
+        &__title{
+            font-family: 'Lato-Regular';
+            font-size: 3em;
+            text-transform: uppercase;
+            color: $yellow-menu;
+        }
+
+        &__description{
+            font-family: 'Lato-Regular';
+            color:white;
+        }
+
+        &__text-right{
+            margin-top: -60%;
+            font-size: 1em;
+            color: white;
+            padding: 0px 30px;
+            left: 0px;
+        }
+
+        &__subtitle{
+            font-family: "Lato-Black";
+            font-size: 3em;
+            text-transform: uppercase;
+            color: $yellow-menu;
+        }
+
+        &__right{
+            margin-left: -8px;
+            img{
+                height: 268px;
+                width: 100%;
+                margin-left: 8px
+            }
+        }
+    }
+
+    #waves {
+        margin-top: -45%;
+
+    }
+}*/
+

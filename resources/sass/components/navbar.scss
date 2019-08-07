@@ -1,0 +1,41 @@
+.navbar-brand{
+
+}
+
+.nav-link{
+  font-family: 'Lato-Regular' !important;
+  color: $yellow-menu !important;
+}
+
+.nav-link-lang{
+  font-family: 'Lato-Regular' !important;
+  color: $yellow-menu2 !important;
+    margin-left: 10%;
+}
+
+.nav-item-gray a{
+    color:$gray !important;
+}
+
+
+.nav-item-gray a:hover{
+    color:$yellow-menu !important;
+}
+
+
+.nav-item-active a{
+    color: $yellow-menu !important;
+}
+
+.nav-link:hover{
+  color: white !important;
+}
+
+.nav-link-lang:hover{
+  color: $gray !important;
+}
+
+
+.navbar-brand img{
+    width: 200px;
+}

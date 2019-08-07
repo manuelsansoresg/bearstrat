@@ -1,0 +1,112 @@
+#section{
+    padding-top:7%;
+}
+
+.section-grafica1{
+    padding-top:7%;
+}
+
+.yearCounter{
+    text-align:center;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:0 auto;
+    margin-top: -70px;
+
+}
+.yearNumber{
+    font-size:20px;
+    height: 60px;
+    line-height:60px;
+    position:relative;
+
+}
+.year-loader{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-size:60px;
+
+}
+
+.year-loader1{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-size:60px;
+
+}
+
+.yearCounter .yearText{
+    font-size:18px;
+}
+
+/* animation fadeinUp*/
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+/* animation fadeinUp*/
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+
+    #section {
+        padding-top: 21%;
+    }
+}
