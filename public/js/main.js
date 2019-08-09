@@ -175,20 +175,23 @@ $(function () {
      * area de pins
      * */
 
-    /*var bigTitle = new TimelineMax();
-    bigTitle
-        .from('.title', 0.2, { y: '-50%', autoAlpha: 0, ease: Power0.easeNone }, 0)
-        .to('.title', 1, { y: '+50%', autoAlpha: 0, ease: Power0.easeNone }, 0.2);*/
-
+    var bigTitle = new TimelineMax();
+    bigTitle.from('.title', 0.2, {
+      y: '-50%',
+      autoAlpha: 0,
+      ease: Power0.easeNone
+    }, 0).to('.title', 1, {
+      y: '+50%',
+      autoAlpha: 0,
+      ease: Power0.easeNone
+    }, 0.2);
     var pinIntroScene = new ScrollMagic.Scene({
       triggerElement: '.section1 .pin-wrapper',
       triggerHook: 0,
       duration: '100%'
     }).setPin('.section1 .pin-wrapper', {
       pushFollowers: false
-    })
-    /* .setTween(bigTitle)*/
-    .addTo(controller); // pin 2
+    }).setTween(bigTitle).addTo(controller); // pin 2
 
     var pinIntroScene = new ScrollMagic.Scene({
       triggerElement: '.section2 .pin-wrapper',
@@ -444,6 +447,10 @@ $(function () {
   // wait for document ready
   if ($(".nosotros").length > 0) {
     AOS.init();
+    animate(200, "linea1");
+    animate(200, "linea2");
+    animate(200, "linea3");
+    animate(200, "linea4");
   }
 
   $('.js-tilt').tilt({
@@ -530,17 +537,20 @@ $(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 /*grafica final*/
-var controller = new ScrollMagic.Controller();
-var scene = new ScrollMagic.Scene({
-  triggerElement: ".grafica2",
-  duration: 200,
-  reverse: false
-}).addTo(controller).reverse(false).on("enter", function (e) {
-  if (e.type == "enter") {
-    animate(200, "grafica2-svg");
-  }
-});
+if ($("#grafica2").length > 0) {
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#grafica2",
+    duration: 200,
+    reverse: false
+  }).addTo(controller).reverse(false).on("enter", function (e) {
+    if (e.type == "enter") {
+      animate(200, "grafica2-svg");
+    }
+  });
+}
 /*grafica final*/
+
 
 __webpack_require__(/*! ./components/home */ "./resources/js/components/home.js");
 

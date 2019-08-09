@@ -29,7 +29,15 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
+
+Route::get('/como-iniciar', function () {
+    return view('como_iniciar');
+});
+
 Auth::routes();
+
+Route::post('/step1', 'StepController@step1');
+Route::post('/step3', 'StepController@step3');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/inicio', 'SectionController@inicio');

@@ -210,6 +210,5 @@
             </div>
         </div>
     </div>
-
-
+    @include('grafica2')
 @endsection

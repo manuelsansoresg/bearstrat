@@ -1,0 +1,86 @@
+.como-iniciar{
+   min-height: 100vh;
+    label{
+        font-family: 'Lato-Bold';
+        color: $gray2;
+    }
+    &__left{
+        background-color: $blue;
+        height: 85vh;
+        position: relative;
+
+
+    }
+    &__right{
+        position: relative;
+        height: 82vh;
+        margin-top: 10px;
+    }
+
+    &__right-buttons{
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        padding-bottom: 20px;
+        width: 100%
+    }
+
+    &__ul{
+        position: absolute;
+        right: -16px;
+        list-style: none;
+        margin-top: 12%;
+        font-family: 'Lato-Bold';
+    }
+    &__circle{
+        border-radius: 1em;
+        -moz-border-radius: 1em;
+        -webkit-border-radius: 1em;
+
+        line-height: 1.9em;
+        margin-right: 5px;
+        text-align: center;
+        width: 2em;
+        height: 2em;
+        margin-top: 20px;
+    }
+    &__step{
+        background-color: $blue4;
+        color: white;
+    }
+    &__step-out{
+        background-color:  white;
+        color: $gray;
+    }
+
+    &__step-ok{
+        background-color: $blue5;
+        color: white;
+    }
+
+    &__text{
+        position: absolute;
+        bottom: 20%;
+        color:white;
+        font-family: 'PlayfairDisplay-Regular';
+        padding: 0px 30px;
+    }
+
+    &__text-description{
+        width: 82%;
+        font-size: 1.2em;
+    }
+
+    &__text-title{
+        font-family: 'Lato-Regular';
+        color: $yellow-menu;
+        font-size: 2.5em;
+    }
+    &__text-subtitle{
+        font-family: 'Lato-Bold';
+        color: $yellow-menu;
+        font-size: 4em;
+        margin-top: -20px;
+    }
+}

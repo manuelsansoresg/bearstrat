@@ -10,12 +10,15 @@
 
 @import './components/navbar';
 @import './components/buttons';
+@import './components/animation/fadein';
+@import './components/animation/fadeInRight';
 @import './components/landing';
 @import './components/replaceText';
 @import './components/footer';
 @import './components/como_trabajamos';
 @import './components/grafica';
 @import './components/nosotros';
+@import './components/como_iniciar';
 
 body {
     overflow-x: hidden;
