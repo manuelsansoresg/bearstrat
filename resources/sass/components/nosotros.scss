@@ -2,6 +2,9 @@
     img{
         cursor: pointer;
     }
+    &__hero-movil{
+        display: none;
+    }
     &__hero{
         display: flex;
         justify-content: space-between;
@@ -37,16 +40,16 @@
         height: 100vh;
         &__hero{
             background: url("/img/nosotros/Oso.png") center;
-            padding-top: 41%;
+            margin-top: 5%;
             background-size: cover;
             width: 100%;
             height: 80vh;
-            position: relative;
+            position: absolute;
         }
         &__content-description{
             position: absolute;
             width: 100%;
-            bottom: -35px;
+            bottom: 18px;
             display: flex;
             justify-content: center;
         }
@@ -84,6 +87,9 @@
             color:$blue3;
             text-align: center;
 
+        }
+        &__content-text{
+            height: 85px;
         }
     }
 
@@ -128,11 +134,121 @@
 //tablets
 /*@media (max-width: 768px) {*/
 @include media-breakpoint-down(md) {
+    .nosotros{
+        &__hero{
+            &__left{
+                width: 100%;
+                position: absolute;
+                height: 100vh;
+            }
+            &__right{
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                &__title{
+                    text-align: center;
+                    width: 100%;
+                    font-size: 4em;
+                }
+                &__description{
+                    text-align: center;
+                    width: 100%;
+                    color: white;
+                    font-size: 2em;
+                    text-shadow: 1px 1px $gray;
+                    padding: 0px 20px;
+                }
+            }
+        }
+
+        &__seccion2{
+            height: 40vh;
+            &__hero{
+                margin-top: 8%;
+                height: 34vh;
+            }
+            &__description{
+                width: 66%;
+            }
+        }
+
+        &__seccion3{
+            &__content-text{
+                height: 85px;
+                font-size: 12px;
+            }
+        }
+
+        &__grafica2{
+            height: 29vh;
+            &__image {
+                margin-top: 10%;
+            }
+        }
+    }
+
 
 }
 
 
 //celular
 @include media-breakpoint-down(sm){
+    .nosotros{
+        &__hero-movil{
+            display: block;
+        }
+        &__hero{
+            display: none;
+            &__left{
+                background: url("/img/nosotros/Imagen_nosotros_414.png") center;
+                background-size: cover;
+                width: 100%;
+            }
+            &__right{
+                &__title{
+                    font-size: 3em;
+                }
+                &__description{
+                    font-size: 1.2em;
+                    color: $blue;
+                    padding: 0px;
+                    text-shadow: none;
+                }
+            }
+        }
+        &__seccion2{
+            height: 32vh;
+            &__hero{
+                margin-top: 8%;
+                height: 27vh;
+            }
+            &__description{
+                font-size: 1.2em;
+            }
+        }
+        &__grafica2{
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            &__image{
+                display: none;
+            }
+            &__title{
+                font-size: 1.2em;
+                margin-left: 0px;
+                text-align: center;
+            }
+            &__subtitle{
+                margin-left: 0;
+                text-align: center;
+                font-size: 2em;
+                margin-top: -4px !important;
+            }
 
+        }
+    }
 }

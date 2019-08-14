@@ -1952,6 +1952,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ContactoComponent",
   data: function data() {
@@ -1966,7 +1973,8 @@ __webpack_require__.r(__webpack_exports__);
       select4: 'Conservadora',
       select5: '6 meses (corto plazo)',
       message: '',
-      error: false
+      error: false,
+      isSpiner: false
     };
   },
   created: function created() {
@@ -1976,6 +1984,24 @@ __webpack_require__.r(__webpack_exports__);
     fBack: function fBack() {
       if (this.step > 1) {
         this.step = this.step - 1;
+        console.log(this.step);
+
+        if (this.step == 1) {
+          $('.item1').removeClass('como-iniciar__step-ok');
+          $('.item1').html('1');
+          $('.item1').addClass('como-iniciar__step');
+          $('.item2').removeClass('como-iniciar__step');
+          $('.item2').addClass('como-iniciar__step-out');
+        }
+
+        if (this.step == 2) {
+          $('.item2').removeClass('como-iniciar__step-ok');
+          $('.item2').html('2');
+          $('.item2').addClass('como-iniciar__step');
+          $('.item3').removeClass('como-iniciar__step');
+          $('.item3').addClass('como-iniciar__step-out');
+        }
+
         $(".step").removeClass("animated");
         $(".step").removeClass("fadeInRight");
         setTimeout(function () {
@@ -2001,7 +2027,7 @@ __webpack_require__.r(__webpack_exports__);
           break;
 
         case 3:
-          vthis.fSteps('/step3', 2, 'form-step3');
+          vthis.fSteps('/step3', 3, 'form-step3');
           break;
       }
     },
@@ -2009,6 +2035,7 @@ __webpack_require__.r(__webpack_exports__);
       var vthis = this;
       var myForm = document.getElementById(formId);
       var formData = new FormData(myForm);
+      vthis.isSpiner = true;
       axios.post(url, formData).then(function (response) {
         var result = response.data;
         /*$('#spinner-contacto').hide();*/
@@ -2019,9 +2046,38 @@ __webpack_require__.r(__webpack_exports__);
         $('.item1').html('<i class="fas fa-check"></i>');
         $('.item2').addClass('como-iniciar__step');
         $('.item2').removeClass('como-iniciar__step-out');
+
+        if (vthis.step == 3) {
+          vthis.fContact();
+        }
+
         vthis.step = step;
         vthis.error = false;
+        vthis.isSpiner = false;
       })["catch"](function (error) {
+        vthis.isSpiner = false;
+        vthis.error = true;
+      });
+    },
+    fContact: function fContact() {
+      vthis = this;
+      vthis.isSpiner = true;
+      axios.post('/sendContact', {
+        name: this.name,
+        mail: this.mail,
+        phone: this.phone,
+        message: this.message,
+        select1: this.select1,
+        select2: this.select2,
+        select3: this.select3,
+        select4: this.select4,
+        select5: this.select5
+      }).then(function (response) {
+        var result = response.data;
+        vthis.isSpiner = false;
+        window.location = '/gracias';
+      })["catch"](function (error) {
+        vthis.isSpiner = false;
         vthis.error = true;
       });
     }
@@ -37326,11 +37382,14 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-12 col-md-8 shadow como-iniciar__right" },
+          {
+            staticClass:
+              "col-12 col-md-12 col-lg-8 shadow-none shadow-lg como-iniciar__right"
+          },
           [
             _c("div", { staticClass: "container" }, [
               _c("div", { staticClass: "row justify-content-center" }, [
-                _c("div", { staticClass: "col-12 col-md-10" }, [
+                _c("div", { staticClass: "col-12 col-md-10 col-lg-10" }, [
                   _vm.step == 1
                     ? _c("div", { staticClass: "step mt-5" }, [
                         _c("form", { attrs: { id: "form-step1" } }, [
@@ -37419,7 +37478,7 @@ var render = function() {
                     ? _c(
                         "div",
                         {
-                          staticClass: "step mt-4",
+                          staticClass: "step mt-5 mt-md-4",
                           attrs: { "data-aos": "fade-right" }
                         },
                         [
@@ -37786,6 +37845,16 @@ var render = function() {
                     : _vm._e()
                 ]),
                 _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-12 text-center mt-5" }, [
+                    _vm.isSpiner
+                      ? _c("i", {
+                          staticClass: "fas fa-spinner fa-spin text-muted"
+                        })
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
                 _vm.error
                   ? _c("div", { staticClass: "col-12 col-md-10" }, [
                       _c("small", { staticClass: "text-danger" }, [
@@ -37811,14 +37880,33 @@ var render = function() {
                   )
                 : _vm._e(),
               _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", on: { click: _vm.fStep } },
-                [
-                  _vm._v(" Siguiente "),
-                  _c("i", { staticClass: "fas fa-chevron-right" })
-                ]
-              )
+              _vm.step != 3
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      on: { click: _vm.fStep }
+                    },
+                    [
+                      _vm._v(" Siguiente "),
+                      _c("i", { staticClass: "fas fa-chevron-right" })
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.step == 3
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      on: { click: _vm.fStep }
+                    },
+                    [
+                      _vm._v(" Enviar "),
+                      _c("i", { staticClass: "fas fa-chevron-right" })
+                    ]
+                  )
+                : _vm._e()
             ])
           ]
         )
@@ -37833,7 +37921,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "col-12 col-md-4 como-iniciar__left shadow" },
+      { staticClass: "col-12 col-md-12  col-lg-4 como-iniciar__left shadow" },
       [
         _c("ul", { staticClass: "como-iniciar__ul" }, [
           _c(

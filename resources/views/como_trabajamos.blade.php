@@ -7,17 +7,17 @@
                 <div class="col-12">
                    <div class="como-trabajamos__text" data-aos="fade-left" data-aos-duration="1500">
                        <p class="como-trabajamos__title">
-                           Trading
+                             {{ trans('como_trabajamos.seccion1-title') }}
                        </p>
                        <p class="como-trabajamos__subtitle">
-                           Talent
+                             {{ trans('como_trabajamos.seccion1-title2') }}
                        </p>
                    </div>
                     <div>
                         <canvas id="waves"></canvas>
                     </div>
                     <div class="como-trabajamos__description"  data-aos="fade-up" data-aos-duration="1500">
-                        Tenemos dos equipos especializados en las áreas de commodities y equity respectivamente. Cada uno es independiente y ambos se rigen por reglas de riesgo y control de operaciones.
+                        {{ trans('como_trabajamos.seccion1-description') }}
                     </div>
                 </div>
             </div>
@@ -42,12 +42,12 @@
                                 </svg>
                             {{-- linea--}}
                             <header class="slideInUp">
-                                <p class="como-trabajamos__aligment__title mb-0">  Alignment With  </p>
-                                <p class="como-trabajamos__aligment__title mt-0 mt-n3"> Our Investors </p>
+                                <p class="como-trabajamos__aligment__title mb-0"> {{ trans('como_trabajamos.seccion2-title') }}  </p>
+                                <p class="como-trabajamos__aligment__title mt-0 mt-n3"> {{ trans('como_trabajamos.seccion2-title2') }} </p>
                             </header>
                             <section>
                                 <p class="slideInUp slideInUp2 como-trabajamos__aligment__description" >
-                                    Nuestros inversionistas son nuestros socios, por ello todo lo que hacemos está enfocado en aumentar su patrimonio, ofreciendo los mayores rendimientos de la industria.
+                                        {{ trans('como_trabajamos.seccion2-description') }}
                                 </p>
                             </section>
                             {{-- linea--}}
@@ -87,55 +87,50 @@
 
     </div>
 
-    <div class="container-fluid riskManagment d-none">
-        <div class="row">
-            <div class="col-12 col-md-5 offset-md-1" data-aos="fade-right" data-aos-duration="1500">
-                <img class="img-fluid" src="/img/como_trabajamos/foto_risk.png" alt="">
-            </div>
-            <div class="col-12 col-md-6 ml-md-n4"  data-aos="zoom-in-up" data-aos-duration="1500">
-                <div class="riskManagment__text">
-                    <p class="riskManagment__title mb-0">risk</p>
-                    <p class="mt-n3 mb-0 riskManagment__subtitle">management</p>
-                    <p class="riskManagment__description como-trabajamos__risk__right-textOne-description">
-                        Nuestros equipos de trading están enfocados en producir ganancias constantes en nuestro día a día, manteniendo un equilibrio positivo entre días ganadores y días perdedores.
-
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12 riskManagment__right">
-                        <img  src="/img/como_trabajamos/Cuadrado_risk.png" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-8 riskManagment__text-right" data-aos="zoom-in-up" data-aos-duration="1500">
-                        Nuestro <span class="color-yellow">objetivo ratio</span> de operaciones ganadoras vs perdedoras es de por lo <span class="color-yellow">menos 3:1. </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="como-trabajamos__risk ">
         <div class="como-trabajamos__risk__left" data-aos="fade-right" data-aos-duration="1500">
             <img class="img-fluid" src="/img/como_trabajamos/foto_risk.png" alt="">
         </div>
         <div class="como-trabajamos__risk__right">
             <div class="como-trabajamos__risk__right-textOne" data-aos="zoom-in-up" data-aos-duration="1500">
-                <p class="como-trabajamos__risk__right-textOne-title mb-0">risk</p>
-                <p class="mt-n3 mb-0 como-trabajamos__risk__right-textOne-subtitle">management</p>
+                <p class="como-trabajamos__risk__right-textOne-title mb-0">{{ trans('como_trabajamos.seccion3-title') }}</p>
+                <p class="mt-n3 mb-0 como-trabajamos__risk__right-textOne-subtitle">{{ trans('como_trabajamos.seccion3-title2') }}</p>
                 <p class=" como-trabajamos__risk__right-textOne-description">
-                    Nuestros equipos de trading están enfocados en producir ganancias constantes en nuestro día a día, manteniendo un equilibrio positivo entre días ganadores y días perdedores.
+                    {{ trans('como_trabajamos.seccion3-description') }}
 
                 </p>
             </div>
-            <div class="como-trabajamos__risk__right-text" data-aos="zoom-in-up" data-aos-duration="1500">
-                Nuestro <span class="color-yellow">objetivo ratio</span> de operaciones ganadoras vs perdedoras es de por lo <span class="color-yellow">menos 3:1. </span>
+            <div class="como-trabajamos__risk__right-text">
+                <div data-aos="zoom-in-up" data-aos-duration="1500">
+                    {!! trans('como_trabajamos.seccion3-description2') !!}
+                </div>
 
             </div>
-            <img class="img-fluid" src="/img/como_trabajamos/Cuadrado_risk.png" alt="">
+            <img class="img-fluid como-trabajamos__footer"  src="/img/como_trabajamos/Cuadrado_risk.png" alt="">
         </div>
 
     </div>
+    <div class="como-trabajamos__risk-movil">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img class="img-fluid" src="/img/como_trabajamos/foto_risk.png" alt="">
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="como-trabajamos__risk__right-textOne-title mb-0">{{ trans('como_trabajamos.seccion3-title') }}</p>
+                    <p class="mt-n3 mb-0 como-trabajamos__risk__right-textOne-subtitle">{{ trans('como_trabajamos.seccion3-title2') }}</p>
+                    <p class=" como-trabajamos__risk__right-textOne-description">
+                        {{ trans('como_trabajamos.seccion3-description') }}
 
+                    </p>
+                </div>
+                <div class="col-12 como-trabajamos__risk-movil__description" >
+                    <div data-aos="fade-up" data-aos-duration="1500">
+                        {!! trans('como_trabajamos.seccion3-description2') !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @include('grafica2')
 @endsection

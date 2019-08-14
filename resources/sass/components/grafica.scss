@@ -93,15 +93,42 @@
 }
 
 @include media-breakpoint-down(md) {
-
+    .grafica-content2 {
+        margin-top: -20%;
+    }
+    .grafica{
+        &__chart{
+            width: 100%;
+            left: 0px;
+        }
+        &__title{
+            margin-top: 20px;
+            font-size: 3em;
+            width: 100%;
+        }
+        &__content{
+            width: 100%;
+            font-size: 20px;
+            height: 90%;
+            margin-left:0px;
+            padding: 0px 20px;
+        }
+    }
 }
 
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-down(sm){
-    .grafica-content2 {
-        margin-top: -20%;
+
+    .grafica-content1{
+        margin-top: 0%;
     }
+
+    .grafica-content2{
+        margin-top: -15%;
+    }
+
+
     .grafica{
         &__chart{
             width: 100%;

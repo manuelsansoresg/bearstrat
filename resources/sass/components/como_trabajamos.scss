@@ -49,7 +49,9 @@
             font-size: 1.2em;
         }
     }
-
+    &__risk-movil{
+        display: none;
+    }
     &__risk{
         display: flex;
         justify-content: space-between;
@@ -173,22 +175,22 @@
     transform: translate3d(0, 0, 0);
 }
 
-/******************************************************************************
-**  responsive
-*********************************************************************************
-*/
+    /******************************************************************************
+    **  responsive
+    *********************************************************************************
+    */
 
-@include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(lg) {
 
-}
+    }
 
-@include media-breakpoint-down(md) {
+    @include media-breakpoint-down(md) {
     .como-trabajamos{
         height: 40vh;
         &__description {
             margin-top: -15%;
             width: 80%;
-            font-size: 1em;
+            font-size: 1.2em;
         }
         &__risk{
             &__left{
@@ -222,10 +224,14 @@
     }
 }
 
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-down(sm){
     .como-trabajamos{
         height: 62vh;
+        &__footer{
+            display: none;
+        }
         &__aligment{
             &__title{
                 font-size: 2em;
@@ -243,20 +249,19 @@
             width: 92%;
             font-size: 1em;
         }
+        &__risk-movil{
+            display: block;
+            color: $yellow-menu;
+
+            &__description{
+                font-family: 'Lato-Bold';
+                color: $yellow-menu;
+                padding-bottom: 10px;
+            }
+        }
         &__risk{
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            &__left{
-                height: 38vh;
-                width: 100%;
-                padding-left: 0px;
-                margin-top: 20%;
-            }
-            &__right{
-                margin-top: -110px;
-            }
+            display: none;
+
             &__right-textOne {
                 padding: 0px;
                 margin-left: 5%;
@@ -269,14 +274,16 @@
                 font-size: 2em;
             }
             &__right-textOne-description{
-                color: white;
+
             }
             &__right-text{
+                position: relative;
                 margin-left: 0%;
                 width: 100%;
                 margin-top: 45px;
                 font-size: 1em;
                 padding: 0px 10px;
+                background-color: $blue2;
             }
         }
     }

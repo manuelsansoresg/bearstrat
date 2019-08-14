@@ -1,0 +1,29 @@
+.thankyou{
+    min-height: 100vh;
+
+    &__content{
+        background-color: $blue;
+        min-height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-family: 'Lato-Regular';
+        color: $yellow-menu;
+        font-size: 3em;
+    }
+    &__subtitle{
+        font-family: 'Lato-Black';
+        color: $yellow-menu;
+        font-size: 3em;
+        margin-top: -15px;
+    }
+
+    &__text{
+        font-family: 'PlayfairDisplay-Regular';
+        color: white;
+    }
+}

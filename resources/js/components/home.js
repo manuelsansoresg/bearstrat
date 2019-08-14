@@ -17,7 +17,7 @@ $(function () { // wait for document ready
         /**
          * area texto final
          * */
-        var lastTitles = new TimelineMax();
+        /*var lastTitles = new TimelineMax();
         lastTitles
             .staggerFrom('.titles h2', 1, { cycle:{x: ["50%","-50%"]}, autoAlpha: 0, ease: Power0.easeNone }, "-1")
         var ourScene = new ScrollMagic.Scene({
@@ -27,12 +27,12 @@ $(function () { // wait for document ready
 
         })
             .setTween(lastTitles)
-            .addTo(controller);
+            .addTo(controller);*/
 
         /**
          * area de pins
          * */
-        var bigTitle = new TimelineMax();
+        /*var bigTitle = new TimelineMax();
         bigTitle
             .from('.title', 0.2, { y: '-50%', autoAlpha: 0, ease: Power0.easeNone }, 0)
             .to('.title', 1, { y: '+50%', autoAlpha: 0, ease: Power0.easeNone }, 0.2);
@@ -43,7 +43,7 @@ $(function () { // wait for document ready
         })
             .setPin('.section1 .pin-wrapper', { pushFollowers: false })
             .setTween(bigTitle)
-            .addTo(controller);
+            .addTo(controller);*/
         // pin 2
         var pinIntroScene = new ScrollMagic.Scene({
             triggerElement: '.section2 .pin-wrapper',
@@ -104,7 +104,6 @@ $(function () { // wait for document ready
         // build scene
         var scene = new ScrollMagic.Scene({triggerElement: ".grafica", duration: set_duration})
             .setTween(tween)
-            .addIndicators()
             .addTo(controller);
         /*grafica*/
 
@@ -120,78 +119,14 @@ $(function () { // wait for document ready
 
         /* area texto grafica*/
 
-
-/*var yearChange = new TimelineMax()
-
-    .to(".year-loader", 1, {
-            rotation:'0',
-            onStart: function () {
-                /!*  $tText.html("1");
-                  $year.html("year")*!/
-                $('.seccion1').hide();
-                $('.seccion2').show();
-                $('.seccion2').addClass('animated animatedFadeInUp fadeInUp');
-                $('.yearCounter').addClass('position-absolute');
-                $('.section-grafica1').css({ height: "200vh"});
-
-
-
-            },
-            onReverseComplete: function () {
-                /!* $tText.html("1");
-                 $year.html("year")*!/
-                $('.seccion1').addClass('animated animatedFadeInUp fadeInUp');
-                $('.seccion1').show();
-                $('.seccion2').hide();
-
-            }
-        }
-    )
-    .to(".year-loader", 1, {
-        rotation:'100%',
-        onStart: function () {
-
-            $('.seccion3').show();
-            $('.seccion2').hide();
-            $('.seccion1').hide();
-
-
-        },
-        onReverseComplete: function () {
-            $('.seccion3').hide();
-        }
-    }
-)
-
-var yearCount = new ScrollMagic.Scene({
-    triggerElement:'.section-grafica1',
-    triggerHook:0,
-    duration:'200%'
-})
-
-
-    .setTween(yearChange)
-
-    .addIndicators() // add indicators (requires plugin)
-    .setPin('.yearCounter', {pushFollowers: false})
-    .addTo(controller);*/
-
-        /* area texto grafica*/
-
-        /* area texto movimiento 3d*/
-        /* area texto final*/
-        // init
-
-
-
-        var $tText = $('#tText');
+        /*var $tText = $('#tText');
         var $year = $('.yearText');
         var yearChange = new TimelineMax()
             .to(".year-loader", 1, {
                     rotation:'0',
                     onStart: function () {
-                      /*  $tText.html("1");
-                        $year.html("year")*/
+                      /!*  $tText.html("1");
+                        $year.html("year")*!/
                         $('#seccion1').hide();
                         $('#seccion2').show();
                         $('#seccion2').addClass('animated animatedFadeInUp fadeInUp');
@@ -199,8 +134,8 @@ var yearCount = new ScrollMagic.Scene({
                         $('#section').css({ height: "100vh"});
                     },
                     onReverseComplete: function () {
-                       /* $tText.html("1");
-                        $year.html("year")*/
+                       /!* $tText.html("1");
+                        $year.html("year")*!/
                         $('#seccion1').addClass('animated animatedFadeInUp fadeInUp');
                         $('#seccion1').show();
                         $('#seccion2').hide();
@@ -208,29 +143,7 @@ var yearCount = new ScrollMagic.Scene({
                     }
                 }
             )
-            /*.to(".year-loader", 1, {
-                    rotation:'100%',
-                    onStart: function () {
-                     /!*   $tText.html("2");
-                        $year.html("years")*!/
-                        $('#seccion2').show();
-                    },
-                    onReverseComplete: function () {
-                        /!*$tText.html("1");*!/
-                        $('#seccion1').hide();
-                    }
-                }
-            )
-            .to(".year-loader", 1, {
-                    rotation:'360',
-                    onStart: function () {
-                        $tText.html("3");
-                    },
-                    onReverseComplete: function () {
-                        /!*$tText.html("1");*!/
-                    }
-                }
-            );*/
+
 
         var yearCount = new ScrollMagic.Scene({
             triggerElement:'#section',
@@ -241,46 +154,11 @@ var yearCount = new ScrollMagic.Scene({
 
             .setTween(yearChange)
 
-            .addIndicators() // add indicators (requires plugin)
             .setPin('.yearCounter', {pushFollowers: false})
-            .addTo(controller);
-
-
-
-// define movement of panels
-        /*var bigTitle = new TimelineMax();
-        bigTitle
-            .from('.title-slide-opacity', 0.2, { y: '-50%', autoAlpha: 0, ease: Power0.easeNone }, 0)
-            .to('.title-slide-opacity', 1, { y: '+50%', autoAlpha: 0, ease: Power0.easeNone }, 0.2);
-        var pinIntroScene = new ScrollMagic.Scene({
-            triggerElement: '#pinContainer',
-            triggerHook: 0,
-            duration: '90%'
-        })
-
-            .setTween(bigTitle)
-            .addTo(controller);
-
-        var wipeAnimation = new TimelineMax()
-            .fromTo(".p-section.panel2", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
-            .fromTo(".p-section.panel3",    1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
-
-
-        // create scene to pin and link animation
-        new ScrollMagic.Scene({
-            triggerElement: "#pinContainer",
-            triggerHook: "onLeave",
-            duration: "90%"
-        })
-            .on('start', function(){
-                TweenMax.to('.panel1', 1,{top: 0, opacity: 1})
-
-
-            })
-            .setPin("#pinContainer")
-            .setTween(wipeAnimation)
-            .addIndicators() // add indicators (requires plugin)
             .addTo(controller);*/
+
+
+
 
         // init
         var controller = new ScrollMagic.Controller();
@@ -299,7 +177,6 @@ var yearCount = new ScrollMagic.Scene({
         })
             .setPin("#pinContainer")
             .setTween(wipeAnimation)
-            .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
     }

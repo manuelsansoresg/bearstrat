@@ -8,12 +8,31 @@
             </div>
             <div class="nosotros__hero__right" data-aos="fade-up" data-aos-duration="1500">
                 <div class="nosotros__hero__right__title">
-                    <p> NOSOTROS </p>
+                    <p> {{ trans('nosotros.seccion1-title') }} </p>
                 </div>
                 <div class="nosotros__hero__right__description">
                     <p>
-                        En Bearstrat estamos listos para poner a tu disposición nuestra amplia experiencia en inversiones, con la misión de convertirnos en tus socios estratégicos y generar el mayor rendimiento para tu patrimonio.
+                        {{ trans('nosotros.seccion1-description') }}
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="nosotros__hero-movil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" data-aos="zoom-in" data-aos-duration="1500">
+                        <img class="img-fluid" src="/img/nosotros/Imagen_nosotros_414.png" alt="">
+                    </div>
+                    <div class="col-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="nosotros__hero__right__title">
+                            <p> {{ trans('nosotros.seccion1-title') }} </p>
+                        </div>
+                        <div class="nosotros__hero__right__description">
+                            <p>
+                                {{ trans('nosotros.seccion1-description') }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,7 +40,7 @@
             <div class="nosotros__seccion2__hero"  data-tilt-axis="x" data-tilt>
                 <div class="nosotros__seccion2__content-description"  >
                     <div class="nosotros__seccion2__description" data-aos="fade-up" data-aos-duration="1500">
-                        <span class="nosotros__seccion2__marker">Compartir el éxito</span> con nuestros socios es lo que nos ha llevado a ser la mejor opción de <span class="nosotros__seccion2__marker">inversión</span> en el mercado.
+                    {!! trans('nosotros.seccion2-description')  !!}
                     </div>
                 </div>
             </div>
@@ -31,13 +50,15 @@
                 <div class="row mt-5">
                     <div class="col-12 col-md-3">
                         <p class="nosotros__seccion3__title">CDMX </p>
-                        <img class="img-fluid" onmouseout="this.src='/img/nosotros/Mexico_azul.png';" onmouseover="this.src='/img/nosotros/Mexico_color.png'" src="/img/nosotros/Mexico_azul.png" alt="">
-                        <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
-                            AV. Insurgentes Sur 953, Nápoles,
-                        </p>
-                        <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
-                            Ciudad de México, CDMX
-                        </p>
+                        <a href="https://www.google.com/maps/place/Plaza+Metr%C3%B3poli+Patriotismo/@19.396306,-99.1826388,17z/data=!3m1!4b1!4m5!3m4!1s0x85d1ff653a323f85:0xe120e3c6baa15f01!8m2!3d19.396306!4d-99.1804501?hl=es-MX" target="_blank"><img class="img-fluid" onmouseout="this.src='/img/nosotros/Mexico_azul.png';" onmouseover="this.src='/img/nosotros/Mexico_color.png'" src="/img/nosotros/Mexico_azul.png" alt=""></a>
+                        <div class="nosotros__seccion3__content-text">
+                            <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
+                                Plaza Metrópoli Patriotismo, Piso 4, <br> Col. San Pedro de los Pinos
+                            </p>
+                            <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
+                                Ciudad de México, CDMX
+                            </p>
+                        </div>
                         <div class="row justify-content-center mt-n3">
                             <div class="col-12  col-md-8">
                                 <svg  version="1.1" id="linea1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -56,12 +77,15 @@
                     <div class="col-12 col-md-3">
                         <p class="nosotros__seccion3__title">Querétaro </p>
                         <img class="img-fluid" onmouseout="this.src='/img/nosotros/Queretaro_azul.png';" onmouseover="this.src='/img/nosotros/Queretaro.png'" src="/img/nosotros/Queretaro_azul.png" alt="">
-                         <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
-                            AV. Madero, Centro
-                        </p>
-                        <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
-                           Santiago de Querétaro, Qro
-                        </p>
+                        <div class="nosotros__seccion3__content-text">
+                            <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
+                                AV. Madero, Centro
+                            </p>
+                            <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
+                                Santiago de Querétaro, Qro
+                            </p>
+                        </div>
+
                         <div class="row justify-content-center mt-n3">
                             <div class="col-12  col-md-8">
                                 <svg  version="1.1" id="linea2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -79,13 +103,16 @@
                     </div>
                     <div class="col-12 col-md-3">
                         <p class="nosotros__seccion3__title">Mérida </p>
-                        <img class="img-fluid" onmouseout="this.src='/img/nosotros/Merida_azul.png';" onmouseover="this.src='/img/nosotros/Merida_color.png'" src="/img/nosotros/Merida_azul.png" alt="">
-                         <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
-                            Paseo de Montejo, Centro
-                        </p>
-                        <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
-                            Mérida, Yuc
-                        </p>
+                        <a href="https://www.google.com/maps/place/Calle+71+207a,+Montes+de+Am%C3%A9,+97115+M%C3%A9rida,+Yuc./@21.032974,-89.6220164,19z/data=!3m1!4b1!4m5!3m4!1s0x8f56769cb77ea3b9:0x771dc809ef7c5324!8m2!3d21.0329727!4d-89.6214692?hl=es-MX" target="_blank"><img class="img-fluid"  onmouseout="this.src='/img/nosotros/Merida_azul.png';" onmouseover="this.src='/img/nosotros/Merida_color.png'" src="/img/nosotros/Merida_azul.png" alt=""></a>
+                        <div class="nosotros__seccion3__content-text">
+                            <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
+                                Calle 71 #203, Col. Montes de Amé
+
+                            </p>
+                            <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
+                                Mérida, Yuc
+                            </p>
+                        </div>
                         <div class="row justify-content-center mt-n3">
                             <div class="col-12  col-md-8">
                                 <svg  version="1.1" id="linea3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -104,12 +131,14 @@
                     <div class="col-12 col-md-3">
                         <p class="nosotros__seccion3__title">Montreal</p>
                         <img class="img-fluid" onmouseout="this.src='/img/nosotros/montreal_azul.png';" onmouseover="this.src='/img/nosotros/montreal_color.png'" src="/img/nosotros/montreal_azul.png" alt="">
-                         <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
-                            1409 Rue Saint-Marc,
-                        </p>
-                        <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
-                            Monteréal, Canadá
-                        </p>
+                        <div class="nosotros__seccion3__content-text">
+                            <p class="nosotros__seccion3__subtitle mb-0 mt-3" data-aos="fade-up" data-aos-duration="1500">
+                                1409 Rue Saint-Marc,
+                            </p>
+                            <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
+                                Monteréal, Canadá
+                            </p>
+                        </div>
                         <div class="row justify-content-center mt-n3">
                             <div class="col-12  col-md-8">
                                 <svg  version="1.1" id="linea4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

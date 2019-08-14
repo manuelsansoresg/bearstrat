@@ -2,7 +2,7 @@
     <div class="como-iniciar">
         <div class="container">
             <div class="row mt-4">
-                <div class="col-12 col-md-4 como-iniciar__left shadow">
+                <div class="col-12 col-md-12  col-lg-4 como-iniciar__left shadow">
                     <ul class="como-iniciar__ul">
                         <li class="como-iniciar__circle como-iniciar__step  shadow item1">1</li>
                         <li class="como-iniciar__circle como-iniciar__step-out shadow item2">2</li>
@@ -16,10 +16,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8 shadow como-iniciar__right">
+                <div class="col-12 col-md-12 col-lg-8 shadow-none shadow-lg como-iniciar__right">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-12 col-md-10">
+                            <div class="col-12 col-md-10 col-lg-10">
                                 <div class="step mt-5" v-if="step == 1">
                                     <form id="form-step1">
                                         <div class="form-group">
@@ -37,7 +37,7 @@
                                     </form>
                                 </div>
 
-                                <div class="step mt-4" v-if="step == 2" data-aos="fade-right">
+                                <div class="step mt-5 mt-md-4" v-if="step == 2" data-aos="fade-right">
                                     <form id="form-step2">
                                         <div class="form-group">
                                             <label>¿Cómo prefieres que te contactemos?</label>
@@ -95,6 +95,12 @@
                                 </div>
 
                             </div>
+                            <!-- spinner-->
+                            <div class="row"  >
+                                <div class="col-12 text-center mt-5">
+                                    <i class="fas fa-spinner fa-spin text-muted" v-if="isSpiner"></i>
+                                </div>
+                            </div>
                             <!-- error -->
                             <div class="col-12 col-md-10" v-if="error">
                                 <small class="text-danger">Los campos marcados con * son obligatorios</small>
@@ -104,7 +110,8 @@
                     </div>
                     <div class="como-iniciar__right-buttons">
                         <button @click="fBack" class="btn btn-primary mr-3" v-if="step != 1"> <i class="fas fa-chevron-left"></i> Anterior </button>
-                        <button @click="fStep" class="btn btn-primary"> Siguiente <i class="fas fa-chevron-right"></i> </button>
+                        <button @click="fStep" class="btn btn-primary" v-if="step != 3"> Siguiente <i class="fas fa-chevron-right"></i> </button>
+                        <button @click="fStep" class="btn btn-primary" v-if="step == 3"> Enviar <i class="fas fa-chevron-right"></i> </button>
                     </div>
                 </div>
             </div>
@@ -113,89 +120,135 @@
 </template>
 
 <script>
-    export default {
-        name: "ContactoComponent",
-        data: function() {
-            return  {
-                step: 1,
-                name: '',
-                mail:  '',
-                phone: '',
-                select1: 'Correo',
-                select2: 'Sí, más de una vez',
-                select3: 'Ganancias',
-                select4: 'Conservadora',
-                select5: '6 meses (corto plazo)',
-                message: '',
-                error: false
-            }
-        },
-        created:function(){
-            AOS.init();
-        },
-        methods:{
-            fBack: function(){
-              if (this.step>1){
-
-                  this.step = this.step-1;
-                  $(".step").removeClass("animated");
-                  $(".step").removeClass("fadeInRight");
-                  setTimeout(function() {
-                      $(".step").addClass("animated");
-                      $(".step").addClass("fadeInRight");
-
-                  }, 100);
-              }
+        export default {
+            name: "ContactoComponent",
+            data: function() {
+                return  {
+                    step: 1,
+                    name: '',
+                    mail:  '',
+                    phone: '',
+                    select1: 'Correo',
+                    select2: 'Sí, más de una vez',
+                    select3: 'Ganancias',
+                    select4: 'Conservadora',
+                    select5: '6 meses (corto plazo)',
+                    message: '',
+                    error: false,
+                    isSpiner: false
+                }
             },
-            fStep: function(){
+            created:function(){
+                AOS.init();
+            },
+            methods:{
+                    fBack: function(){
 
-                var vthis = this;
-                switch (vthis.step) {
-                    case 1:
-                            vthis.fSteps('/step1', 2, 'form-step1');
-                        break;
-                    case 2:
-                        $('.item2').addClass('como-iniciar__step-ok');
-                        $('.item2').html('<i class="fas fa-check"></i>');
-                        $('.item3').addClass('como-iniciar__step');
-                        $('.item3').removeClass('como-iniciar__step-out');
-                        vthis.step = 3;
-                        break;
-                    case 3:
-                        vthis.fSteps('/step3', 2, 'form-step3');
-                        break;
+                      if (this.step>1){
+
+                          this.step = this.step-1;
+                          console.log(this.step);
+                          if(this.step == 1){
+                              $('.item1').removeClass('como-iniciar__step-ok');
+                              $('.item1').html('1');
+                              $('.item1').addClass('como-iniciar__step');
+
+                              $('.item2').removeClass('como-iniciar__step');
+                              $('.item2').addClass('como-iniciar__step-out');
+                          }
+
+                          if(this.step == 2){
+                              $('.item2').removeClass('como-iniciar__step-ok');
+                              $('.item2').html('2');
+                              $('.item2').addClass('como-iniciar__step');
+
+                              $('.item3').removeClass('como-iniciar__step');
+                              $('.item3').addClass('como-iniciar__step-out');
+                          }
+
+                          $(".step").removeClass("animated");
+                          $(".step").removeClass("fadeInRight");
+                          setTimeout(function() {
+                              $(".step").addClass("animated");
+                              $(".step").addClass("fadeInRight");
+
+                          }, 100);
+                      }
+                    },
+                fStep: function(){
+
+                    var vthis = this;
+                    switch (vthis.step) {
+                        case 1:
+                                vthis.fSteps('/step1', 2, 'form-step1');
+                            break;
+                        case 2:
+                            $('.item2').addClass('como-iniciar__step-ok');
+                            $('.item2').html('<i class="fas fa-check"></i>');
+                            $('.item3').addClass('como-iniciar__step');
+                            $('.item3').removeClass('como-iniciar__step-out');
+                            vthis.step = 3;
+                            break;
+                        case 3:
+                            vthis.fSteps('/step3', 3, 'form-step3');
+                            break;
+                    }
+
+                },
+                fSteps: function (url, step, formId) {
+                    var vthis = this;
+                    let myForm   = document.getElementById(formId);
+                    let formData = new FormData(myForm);
+                    vthis.isSpiner = true;
+                    axios.post
+                    (url, formData)
+                        .then(function (response) {
+                            var result = response.data;
+                            /*$('#spinner-contacto').hide();*/
+                            /*document.getElementById('form-contacto').reset();*/
+                            $('.item1').addClass('como-iniciar__step-ok');
+                            $('.item1').html('<i class="fas fa-check"></i>');
+                            $('.item2').addClass('como-iniciar__step');
+                            $('.item2').removeClass('como-iniciar__step-out');
+                            if(vthis.step == 3){
+                                vthis.fContact();
+                            }
+                            vthis.step = step;
+                            vthis.error = false;
+                            vthis.isSpiner = false;
+
+
+                        })
+                        .catch(function (error) {
+                            vthis.isSpiner = false;
+                            vthis.error = true;
+
+                        })
+                },
+
+                fContact: function () {
+                    vthis = this;
+                    vthis.isSpiner = true;
+                    axios.post
+                    ('/sendContact', {name: this.name, mail: this.mail, phone: this.phone, message: this.message,
+                                        select1: this.select1, select2: this.select2, select3: this.select3,
+                                        select4: this.select4, select5: this.select5
+                                    })
+                        .then(function (response) {
+                            var result = response.data;
+                            vthis.isSpiner = false;
+                            window.location = '/gracias';
+
+                        })
+                        .catch(function (error) {
+                            vthis.isSpiner = false;
+                            vthis.error = true;
+
+                        })
                 }
 
-            },
-            fSteps: function (url, step, formId) {
-                var vthis = this;
-                let myForm   = document.getElementById(formId);
-                let formData = new FormData(myForm);
-
-                axios.post
-                (url, formData)
-                    .then(function (response) {
-                        var result = response.data;
-                        /*$('#spinner-contacto').hide();*/
-                        /*document.getElementById('form-contacto').reset();*/
-                        $('.item1').addClass('como-iniciar__step-ok');
-                        $('.item1').html('<i class="fas fa-check"></i>');
-                        $('.item2').addClass('como-iniciar__step');
-                        $('.item2').removeClass('como-iniciar__step-out');
-                        vthis.step = step;
-                        vthis.error = false;
-
-
-                    })
-                    .catch(function (error) {
-
-                        vthis.error = true;
-
-                    })
             }
-
         }
-    }
 </script>
 
 <style scoped>

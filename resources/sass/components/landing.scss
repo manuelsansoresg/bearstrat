@@ -1,3 +1,6 @@
+.seccion1-movil, .grafica-movil{
+    display: none;
+}
 
 .video{
     width: 100%;
@@ -73,8 +76,8 @@
     color: white;
     font-family: 'Lato-Regular';
     position: absolute;
-    top: 34%;
-    left: 70%;
+    top: 9%;
+    left: 47%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 50%;
@@ -85,8 +88,8 @@
 .titles {
   color: #3f434a;
   position: absolute;
-  top: -50%;
-  left: 60%;
+  top: -89%;
+  left: 37%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
@@ -171,19 +174,7 @@
 /*parrallax*/
 
 /* grafica*/
-/*
-.grafica1__description{
-  height: 145px;
-  overflow: hidden;
-}*/
-/*
-.grafica1__description p{
-  opacity: 0;
-  position: relative;
-  left: -20%;
-  font-size: 1.5em;
-  line-height: 150%;
-}*/
+
 
 .panel {
   height: 200px;
@@ -378,8 +369,6 @@
 @include media-breakpoint-down(lg) {
     .grafica2{
         height: 60vh;
-
-
     }
 
     .bcg-parallax {
@@ -400,6 +389,76 @@
 //tablets
 /*@media (max-width: 768px) {*/
 @include media-breakpoint-down(md) {
+
+    .landing-bear, .grafica{
+        display: none;
+    }
+
+    .section1 .image1{
+        width: 40%;
+    }
+
+    .content-wrapper{
+        width: 100%;
+        text-align: center;
+        left: 0px;
+    }
+
+    .seccion1-movil{
+        display: block;
+        background-color: $blue;
+        height: auto;
+        margin-top: -10px;
+        color: white;
+        padding-bottom: 20px;
+
+        img{
+            width: 40%;
+        }
+
+        &__title{
+            font-size: 3em;
+            font-family: "Lato-Regular";
+        }
+        &__subtitle{
+            font-size: 4em;
+            font-family: "PlayfairDisplay-Regular";
+            text-transform: capitalize;
+            color: $yellow-menu;
+            margin-top: -30px;
+        }
+        &__description{
+            font-size: 1.2em;
+            font-family: "Lato-Regular";
+        }
+    }
+    .grafica-movil{
+        display: block;
+        &__title{
+            font-family: "PlayfairDisplay-Bold";
+            color: $blue3;
+            font-size: 3em;
+        }
+        &__description{
+            font-family: "Lato-Regular";
+            color: $blue;
+            font-size: 1.2em;
+        }
+    }
+
+    .section2 .image2{
+        width: 40%;
+    }
+
+    .title{
+        width: 43%;
+    }
+
+    .titles{
+        top: -64%;
+        left: 68%;
+        width: 37%;
+    }
 
     .video{
         width: 100%;
@@ -433,9 +492,12 @@
 //celular
 @include media-breakpoint-down(sm){
 /*@media (max-width: 576px) {*/
+    .landing-bear, .grafica{
+        display: none;
+    }
     .title{
         font-size: 2em;
-        left: 78%;
+        left: 70%;
 
     }
     .section1{
@@ -447,8 +509,47 @@
             font-size: 12px;
         }
     }
+
+    .seccion1-movil{
+        display: block;
+        background-color: $blue;
+        height: auto;
+        margin-top: -10px;
+        color: white;
+        img{
+            width: 50%;
+        }
+        &__title{
+            font-size: 3em;
+            font-family: "Lato-Regular";
+        }
+        &__subtitle{
+            font-size: 4em;
+            font-family: "PlayfairDisplay-Regular";
+            text-transform: capitalize;
+            color: $yellow-menu;
+            margin-top: -30px;
+        }
+        &__description{
+            font-size: 0.9rem;
+            font-family: "Lato-Regular";
+        }
+    }
+    .grafica-movil{
+        display: block;
+        &__title{
+            font-family: "PlayfairDisplay-Bold";
+            color: $blue3;
+            font-size: 2em;
+        }
+        &__description{
+            font-family: "Lato-Regular";
+            color: $blue;
+        }
+    }
+
     .titles{
-        left: 74%;
+        left: 70%;
         font-size: 2em;
         top: -78%;
     }
@@ -488,16 +589,16 @@
     }
 
     .content-wrapper{
-        left: 5%;
+        left: 0%;
         width: 100%;
     }
 
     .title-slide{
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .author{
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .grafica2{

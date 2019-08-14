@@ -84,3 +84,69 @@
         margin-top: -20px;
     }
 }
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+    .como-iniciar{
+        &__left{
+            height: 20vh;
+
+        }
+        &__right{
+            height: 55vh;
+        }
+        &__text{
+            bottom: 4%;
+            padding: 0px;
+        }
+        &__text-description{
+            width: 100%;
+
+        }
+        &__ul{
+            position: absolute;
+            right: 11px;
+            display: flex;
+            justify-content: space-between;
+            bottom: -33%;
+        }
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .como-iniciar{
+        &__left{
+            height: 43vh;
+
+        }
+        &__right{
+            height: 89vh;
+        }
+        &__text{
+            bottom: 4%;
+            padding: 0px;
+        }
+        &__text-description{
+            width: 100%;
+
+        }
+        &__ul{
+            position: absolute;
+            right: 11px;
+            display: flex;
+            justify-content: space-between;
+            bottom: -22%;
+        }
+    }
+}
