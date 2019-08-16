@@ -12234,6 +12234,37 @@ a.text-dark:focus {
   display: none;
 }
 
+.como-trabajamos__risk-desktop__left {
+  z-index: 99;
+  margin-top: 20px;
+}
+
+.como-trabajamos__risk-desktop__right {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 45vh;
+}
+
+.como-trabajamos__risk-desktop__img {
+  width: 90%;
+}
+
+.como-trabajamos__risk-desktop__right-background {
+  background: url("/img/como_trabajamos/Cuadrado_risk.png") no-repeat;
+  width: 100%;
+  height: 300px;
+  z-index: 1;
+  position: absolute;
+  bottom: 10%;
+}
+
 .como-trabajamos__risk {
   display: -webkit-box;
   display: flex;
@@ -12255,6 +12286,7 @@ a.text-dark:focus {
   padding: 0px 14%;
   color: #DBAD46;
   width: 80%;
+  margin-top: 10%;
 }
 
 .como-trabajamos__risk__right-textOne-title {
@@ -12281,8 +12313,15 @@ a.text-dark:focus {
   margin-top: 6%;
   margin-left: 11%;
   color: white;
-  width: 29%;
   text-align: center;
+  width: 60%;
+  height: 243px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .riskManagment__text {
@@ -12370,6 +12409,33 @@ a.text-dark:focus {
 *********************************************************************************
 */
 
+@media (min-width: 1920px) {
+  .como-trabajamos {
+    height: 70vh;
+  }
+
+  .como-trabajamos__risk-desktop__img {
+    width: 100%;
+  }
+
+  .como-trabajamos__risk-desktop__right-background {
+    background: url("/img/como_trabajamos/Cuadrado_risk_big.png") no-repeat;
+    height: 37vh;
+  }
+
+  .como-trabajamos__risk__right-textOne {
+    margin-top: 30%;
+  }
+
+  .como-trabajamos__risk__right-textOne-description {
+    width: 65%;
+  }
+
+  .como-trabajamos__text {
+    margin-top: 17%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .como-trabajamos {
     height: 40vh;
@@ -12439,6 +12505,10 @@ a.text-dark:focus {
     margin-top: -37%;
     width: 92%;
     font-size: 1em;
+  }
+
+  .como-trabajamos__risk-desktop {
+    display: none;
   }
 
   .como-trabajamos__risk-movil {
@@ -12841,10 +12911,10 @@ a.text-dark:focus {
 }
 
 .nosotros__hero__left {
-  background: url("/img/nosotros/Imagen_nosotros.png");
+  background: url("/img/nosotros/Imagen_nosotros_full.png") center;
   background-size: cover;
   width: 60%;
-  height: 100vh;
+  height: 116vh;
 }
 
 .nosotros__hero__right {
@@ -12855,6 +12925,7 @@ a.text-dark:focus {
   font-family: "Lato-Black";
   color: #DBAD46;
   font-size: 5em;
+  margin-left: 10px;
 }
 
 .nosotros__hero__right__description {
@@ -12862,7 +12933,41 @@ a.text-dark:focus {
   color: #1A3042;
   font-size: 1.3em;
   text-align: center;
-  width: 80%;
+  width: 76%;
+}
+
+.nosotros__oso3d {
+  background: url("/img/nosotros/Fondo.png") no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: relative;
+}
+
+.nosotros__oso3d__img {
+  width: 90%;
+  position: absolute;
+}
+
+.nosotros__oso3d__content-text {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  bottom: 10px;
+}
+
+.nosotros__oso3d__text {
+  font-family: "Lato-Regular";
+  color: white;
+  font-size: 2em;
 }
 
 .nosotros__seccion2 {
@@ -12961,9 +13066,44 @@ a.text-dark:focus {
 
 /*@media (max-width: 1920px) {*/
 
+@media (min-width: 1920px) {
+  .nosotros__hero__left {
+    background-position: center;
+  }
+
+  .nosotros__hero__right__title {
+    margin-left: 10px;
+  }
+
+  .nosotros__hero__right__description {
+    width: 50%;
+  }
+
+  .nosotros__oso3d {
+    height: 76vh;
+    background: url("/img/nosotros/FondoBig.png") no-repeat;
+  }
+
+  .nosotros__oso3d__img {
+    width: 65%;
+  }
+
+  .nosotros__oso3d__content-text {
+    bottom: 15%;
+  }
+}
+
 /*@media (max-width: 768px) {*/
 
 @media (max-width: 991.98px) {
+  .nosotros__hero-movil {
+    display: block;
+  }
+
+  .nosotros__hero {
+    display: none;
+  }
+
   .nosotros__hero__left {
     width: 100%;
     position: absolute;
@@ -12990,12 +13130,11 @@ a.text-dark:focus {
   }
 
   .nosotros__hero__right__description {
-    text-align: center;
+    font-size: 1.2em;
     width: 100%;
-    color: white;
-    font-size: 2em;
-    text-shadow: 1px 1px #B4B4B4;
-    padding: 0px 20px;
+    color: #0B2131;
+    padding: 0px;
+    text-shadow: none;
   }
 
   .nosotros__seccion2 {
@@ -13030,6 +13169,23 @@ a.text-dark:focus {
     display: block;
   }
 
+  .nosotros__oso3d {
+    height: 40vh;
+  }
+
+  .nosotros__oso3d__img {
+    width: 100%;
+  }
+
+  .nosotros__oso3d__content-text {
+    width: 90%;
+    color: white;
+  }
+
+  .nosotros__oso3d__text {
+    font-size: 12px;
+  }
+
   .nosotros__hero {
     display: none;
   }
@@ -13049,6 +13205,7 @@ a.text-dark:focus {
     color: #0B2131;
     padding: 0px;
     text-shadow: none;
+    width: 100%;
   }
 
   .nosotros__seccion2 {

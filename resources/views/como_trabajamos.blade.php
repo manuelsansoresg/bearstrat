@@ -64,30 +64,47 @@
                 </div>
             </div>
         </div>
-        {{--<div class="container">
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <hr>
 
-                    <article id="slide01" class="slide fs animated fade-up">
-                        <div class="wrapper">
-                            <header class="slideInUp">
-                                <h1>A picture is worth a thousand words</h1>
-                            </header>
-                            <section>
-                                <p class="slideInUp slideInUp2">Let the images do the talking and use text for short summaries.</p>
-                            </section>
-                        </div> <!-- .wrapper -->
-                    </article>
-
-                    <hr>
-                </div>
-            </div>
-        </div>--}}
 
     </div>
 
-    <div class="como-trabajamos__risk ">
+    <div class="como-trabajamos__risk-desktop pb-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6  mx-0 px-0 como-trabajamos__risk-desktop__left text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mx-0 px-0 text-right">
+                                <img class="img-fluid como-trabajamos__risk-desktop__img" src="/img/como_trabajamos/foto_risk.png" alt="" data-aos="fade-right" data-aos-duration="1500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mx-0 px-0">
+                    <div class="como-trabajamos__risk-desktop__right">
+                        <div class="como-trabajamos__risk__right-textOne " data-aos="zoom-in-up" data-aos-duration="1500">
+                            <p class="como-trabajamos__risk__right-textOne-title mb-0">{{ trans('como_trabajamos.seccion3-title') }}</p>
+                            <p class="mt-n3 mb-0 como-trabajamos__risk__right-textOne-subtitle">{{ trans('como_trabajamos.seccion3-title2') }}</p>
+                            <p class=" como-trabajamos__risk__right-textOne-description">
+                                {!! trans('como_trabajamos.seccion3-description') !!}
+
+                            </p>
+                        </div>
+                        <div class="col-12 como-trabajamos__risk-desktop__right-background">
+                            <div class="como-trabajamos__risk__right-text como-trabajamos__risk-desktop__right-text">
+                                <div data-aos="zoom-in-up" data-aos-duration="1500">
+                                    {!! trans('como_trabajamos.seccion3-description2') !!}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="como-trabajamos__risk d-none">
         <div class="como-trabajamos__risk__left" data-aos="fade-right" data-aos-duration="1500">
             <img class="img-fluid" src="/img/como_trabajamos/foto_risk.png" alt="">
         </div>

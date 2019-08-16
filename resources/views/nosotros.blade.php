@@ -21,13 +21,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="zoom-in" data-aos-duration="1500">
-                        <img class="img-fluid" src="/img/nosotros/Imagen_nosotros_414.png" alt="">
+                        <img class="img-fluid" src="/img/nosotros/Imagen_nosotros_414.png" data-tilt-axis="x" data-tilt>
                     </div>
                     <div class="col-12" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="nosotros__hero__right__title">
-                            <p> {{ trans('nosotros.seccion1-title') }} </p>
-                        </div>
+
                         <div class="nosotros__hero__right__description">
+                            <div class="nosotros__hero__right__title">
+                                <p> {{ trans('nosotros.seccion1-title') }} </p>
+                            </div>
                             <p>
                                 {{ trans('nosotros.seccion1-description') }}
                             </p>
@@ -36,7 +37,17 @@
                 </div>
             </div>
         </div>
-        <div class="nosotros__seccion2">
+        <div class="nosotros__oso3d" >
+            <div class="nosotros__oso3d__img" data-tilt-axis="x" data-tilt>
+                <img class="img-fluid" src="/img/nosotros/Oso.png" alt="">
+            </div>
+            <div class="nosotros__oso3d__content-text">
+               <div class="nosotros__oso3d__text">
+                   {!! trans('nosotros.seccion2-description')  !!}
+               </div>
+            </div>
+        </div>
+        <div class="nosotros__seccion2 d-none">
             <div class="nosotros__seccion2__hero"  data-tilt-axis="x" data-tilt>
                 <div class="nosotros__seccion2__content-description"  >
                     <div class="nosotros__seccion2__description" data-aos="fade-up" data-aos-duration="1500">
