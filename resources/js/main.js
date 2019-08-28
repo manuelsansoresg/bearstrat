@@ -15,6 +15,13 @@ if ( $("#grafica2").length > 0 ) {
 }
 /*grafica final*/
 
+if ( $(".section-mask").length > 0 ) {
+
+    animate(200, "svg_bienes");
+    /*animate(200, "bs");
+    animate(200, "financieras");
+    animate(200, "negocios");*/
+}
 require('./components/home');
 require('./components/waves');
 require('./components/como_trabajamos');

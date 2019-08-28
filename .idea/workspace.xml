@@ -2,15 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79d04c61-cb02-46e7-8c41-d44c197f6359" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/svg_home/Bienes_Raices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/svg_home/Negocios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/svg_home/bs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/svg_home/financieras.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bearstrat.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StepController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StepController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/home/modelo_beartrat.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/home/modelo_beartrat.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ContactoComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ContactoComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/es/como_trabajamos.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/como_trabajamos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/como_iniciar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/como_iniciar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/components/como_trabajamos.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/como_trabajamos.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/grafica.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/grafica.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/landing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/landing.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/components/nosotros.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/nosotros.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/como_trabajamos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/como_trabajamos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/grafica2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/grafica2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/nosotros.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nosotros.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +284,11 @@
       <workItem from="1565890700458" duration="3598000" />
       <workItem from="1565901913063" duration="8036000" />
       <workItem from="1565924276356" duration="1093000" />
-      <workItem from="1565965225733" duration="16350000" />
+      <workItem from="1565965225733" duration="26622000" />
+      <workItem from="1566223418359" duration="4339000" />
+      <workItem from="1566310719812" duration="9652000" />
+      <workItem from="1566403452736" duration="1616000" />
+      <workItem from="1566407099647" duration="58000" />
     </task>
     <servers />
   </component>

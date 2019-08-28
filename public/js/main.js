@@ -173,19 +173,19 @@ $(function () {
      * area de pins
      * */
 
-    /*var bigTitle = new TimelineMax();
-    bigTitle
-        .from('.title', 0.2, { y: '-50%', autoAlpha: 0, ease: Power0.easeNone }, 0)
-        .to('.title', 1, { y: '+50%', autoAlpha: 0, ease: Power0.easeNone }, 0.2);
+    /* var bigTitle = new TimelineMax();
+     bigTitle
+         .from('.title', 0.2, { y: '50%', autoAlpha: 0, ease: Power0.easeNone }, 0)
+         .to('.title', 1, { y: '+50%', autoAlpha: 0, ease: Power0.easeNone }, 0.2);*/
+
     var pinIntroScene = new ScrollMagic.Scene({
-        triggerElement: '.section1 .pin-wrapper',
-        triggerHook: 0,
-        duration: '100%'
-    })
-        .setPin('.section1 .pin-wrapper', { pushFollowers: false })
-        .setTween(bigTitle)
-        .addTo(controller);*/
-    // pin 2
+      triggerElement: '.section1 .pin-wrapper',
+      triggerHook: 0,
+      duration: '100%'
+    }).setPin('.section1 .pin-wrapper', {
+      pushFollowers: false
+    }) //.setTween(bigTitle)
+    .addTo(controller); // pin 2
 
     var pinIntroScene = new ScrollMagic.Scene({
       triggerElement: '.section2 .pin-wrapper',
@@ -430,6 +430,13 @@ if ($("#grafica2").length > 0) {
 }
 /*grafica final*/
 
+
+if ($(".section-mask").length > 0) {
+  animate(200, "svg_bienes");
+  /*animate(200, "bs");
+  animate(200, "financieras");
+  animate(200, "negocios");*/
+}
 
 __webpack_require__(/*! ./components/home */ "./resources/js/components/home.js");
 

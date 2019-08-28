@@ -21,7 +21,7 @@
         <div>
             @if (isset($_GET['lang']) && $_GET['lang'] == 'eng')
                 <a href="/?lang=eng"><img class="img-fluid" src="/img/btn_eng-on.png" alt=""></a>
-            
+
             @else
                 <a href="/?lang=eng"><img class="img-fluid" src="/img/btn_eng-off.png" alt=""></a>
             @endif
@@ -36,7 +36,7 @@
                 <a href="/?lang=esp"><img class="img-fluid" src="/img/btn_esp-off.png" alt=""></a>
                 @endif
             @endif
-           
+
         </div>
     </section>
     <section class="content">
@@ -119,46 +119,6 @@
         </div>
     </section>
 
-    {{-- <div class="container-fluid" style="position: relative" class="">
-        <div class="row">
-            <div class="col-12 col-md-4  landing-content">
-            </div>
-            <div class="col-12 col-md-6 offset-md-1 align-self-center mt-2 mt-md-0">
-               
-            </div>
-        </div>
-    </div> --}}
-    {{--<div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-    @else
-    <a href="{{ route('login') }}">Login</a>
-
-    @if (Route::has('register'))
-    <a href="{{ route('register') }}">Register</a>
-    @endif
-    @endauth
-    </div>
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Laravel
-        </div>
-
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-        </div>
-    </div>
-    </div>--}}
 </body>
 
 </html>

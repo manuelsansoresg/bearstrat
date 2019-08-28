@@ -16,6 +16,27 @@
                             <p class="mt-n4 section1__subtitle">{{ trans('home.seccion1-title2') }}</p>
                             <div class="section1__description">
                                 {!! trans('home.seccion1-description') !!}
+
+                                <div class="container">
+                                    <div class="row mt-5">
+                                        <div class="col-3 text-center">
+                                            @include('svg_home.bs')
+                                            <p class="section1__percent">50%</p>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            @include('svg_home.financieras')
+                                            <p class="section1__percent">20%</p>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            @include('svg_home.Negocios')
+                                            <p class="section1__percent">20%</p>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            @include('svg_home.Bienes_Raices')
+                                            <p class="section1__percent">10%</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -60,6 +81,26 @@
                     </p>
                 </div>
             </div>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-3 text-center">
+                        @include('svg_home.bs')
+                        <p class="section1__percent">50%</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        @include('svg_home.financieras')
+                        <p class="section1__percent">20%</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        @include('svg_home.Negocios')
+                        <p class="section1__percent">20%</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        @include('svg_home.Bienes_Raices')
+                        <p class="section1__percent">10%</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -80,11 +121,36 @@
         </div>
     </div>
     {{--grafica --}}
-    <div class="grafica">
+    <div class="grafica-full pb-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-1" data-aos="fade-up" data-aos-duration="1500">
+                   <div class="grafica-full__title">
+                       <p class="mb-0">{{ trans('home.seccion4-title') }} </p>
+                       <p class="">{{ trans('home.seccion4-title2') }} </p>
+                   </div>
+                    <div class="grafica-full__description">
+                        <p>{{ trans('home.seccion4-description') }} </p>
+                        <p>
+                            {!! trans('home.seccion4-description2') !!}
+                        </p>
+                    </div>
+                    <div class="grafica-full__description">
+                        {{ trans('home.seccion4-description3') }}
+                    </div>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <img class="img-fluid" src="/img/home/modelo_beartrat.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grafica d-none">
 
         <div id="pinContainer">
             <div class="grafica__chart">
-                <img class="img-fluid" id="myimg" src="/img/Grafica_1/0.png" alt="">
+                {{--<img class="img-fluid" id="myimg" src="/img/Grafica_1/0.png" alt="">--}}
+                <img class="img-fluid" src="/img/home/modelo_beartrat.gif" alt="">
             </div>
 
             <div class="grafica__title">
@@ -149,13 +215,13 @@
             <p class="landing__conocenos-subtitle mb-0">{{ trans('home.seccion5-title2') }}</p>
             <p class="landing__conocenos-title mb-0">{{ trans('home.seccion5-title3') }}</p>
             <hr class="hr-gold-vertical">
-            <button class="btn btn-outline-secondary">{{ trans('home.seccion5-btn') }}</button>
+            <button class="btn btn-outline-secondary" onclick="window.location='/nosotros'">{{ trans('home.seccion5-btn') }}</button>
         </div>
     </div>
     {{--  /conocenos --}}
 
 
-    <div id="section">
+    <div id="section" class="pb-4">
 
         <div class="yearCounter">
             <div class="col-12 col-md-8 offset-md-2">

@@ -87,7 +87,8 @@
         </p>
     </div>
     <div class="d-flex justify-content-center">
-        <button class="btn btn-outline-secondary">MÁS INFORMACIÓN</button>
+        <button onclick="window.location='como-iniciar'" class="btn btn-outline-secondary">MÁS INFORMACIÓN</button>
+
     </div>
 
 </div>

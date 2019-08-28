@@ -14,19 +14,29 @@
 }
 
 .section1{
-  background-color: $blue;
-  padding-left: 10%;
-  &__subtitle{
-    font-family: 'PlayfairDisplay-Regular';
-    text-transform: capitalize;
-    color: $yellow-menu;
-    font-size: 60px;
-  }
-  &__description{
-    font-family: 'Lato-Regular';
-    font-size: 20px;
-    width: 85%;
-  }
+    background-color: $blue;
+    padding-left: 10%;
+    &__img{
+        width: 74px;
+        height: 50px;
+    }
+
+    &__percent{
+        font-family: 'Lato-Bold';
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+    &__subtitle{
+        font-family: 'PlayfairDisplay-Regular';
+        text-transform: capitalize;
+        color: $yellow-menu;
+        font-size: 60px;
+    }
+    &__description{
+        font-family: 'Lato-Regular';
+        font-size: 20px;
+        width: 85%;
+    }
 }
 
 
@@ -77,7 +87,7 @@
     font-family: 'Lato-Regular';
     position: absolute;
     top: 9%;
-    left: 47%;
+    left: 37%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 50%;
@@ -191,6 +201,7 @@
   /*height: 120px;*/
   border: 1px solid black;
 }
+
 
 .grafica1{
 
@@ -366,7 +377,15 @@
 /* 1920*/
 
 /*@media (max-width: 1920px) {*/
-@include media-breakpoint-down(lg) {
+@media (min-width: 1920px) {
+    .grafica-full{
+        display: block;
+    }
+    .grafica{
+        display: none;
+    }
+}
+/*@include media-breakpoint-down(lg) {
     .grafica2{
         height: 60vh;
     }
@@ -374,7 +393,7 @@
     .bcg-parallax {
         padding: 70px 0;
     }
-}
+}*/
 
 //1200
 /*@media (max-width: 1024px) {
@@ -507,6 +526,14 @@
         }
         &__description{
             font-size: 12px;
+        }
+        &__img{
+            width: 60px;
+            height: 42px;
+        }
+
+        &__percent{
+            font-size: 1.5em;
         }
     }
 

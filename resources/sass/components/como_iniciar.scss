@@ -8,7 +8,10 @@
         background-color: $blue;
         height: 85vh;
         position: relative;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
     }
     &__right{
@@ -30,7 +33,7 @@
         position: absolute;
         right: -16px;
         list-style: none;
-        margin-top: 12%;
+        margin-top: -30%;
         font-family: 'Lato-Bold';
     }
     &__circle{
@@ -61,10 +64,11 @@
 
     &__text{
         position: absolute;
-        bottom: 20%;
+       /* bottom: 20%;*/
         color:white;
         font-family: 'PlayfairDisplay-Regular';
         padding: 0px 30px;
+
     }
 
     &__text-description{

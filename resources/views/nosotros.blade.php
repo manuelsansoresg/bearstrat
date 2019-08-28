@@ -147,7 +147,7 @@
                                 1409 Rue Saint-Marc,
                             </p>
                             <p class="nosotros__seccion3__subtitle2" data-aos="fade-up" data-aos-duration="1500">
-                                Monteréal, Canadá
+                                Montreal, Canadá
                             </p>
                         </div>
                         <div class="row justify-content-center mt-n3">
@@ -179,6 +179,9 @@
                 <p class="nosotros__grafica2__subtitle mt-n3">
                     Empecemos a trabajar juntos.
                 </p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button onclick="window.location='como-iniciar'" class="btn btn-outline-primary">MÁS INFORMACIÓN</button>
             </div>
         </div>
 

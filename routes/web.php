@@ -38,7 +38,7 @@ Auth::routes();
 
 Route::post('/step1', 'StepController@step1');
 Route::post('/step3', 'StepController@step3');
-Route::post('/sendContact', 'StepController@contact');
+Route::post('/sendContact', 'StepController@sendContact');
 
 
 Route::get('/gracias', function () {

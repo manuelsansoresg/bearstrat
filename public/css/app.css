@@ -11317,11 +11317,25 @@ a.text-dark:focus {
   color: #DBAD46;
   border-color: #DBAD46;
   border-radius: 0px;
+  z-index: 99999;
 }
 
 .btn-outline-secondary:hover {
   color: white;
-  background-color: #DBAD46;
+  background-color: #DBAD46 !important;
+}
+
+.btn-outline-primary {
+  font-family: "Lato-Regular";
+  color: #0B2131;
+  border-color: #0B2131;
+  border-radius: 0px;
+  z-index: 99999;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background-color: #0B2131 !important;
 }
 
 @-webkit-keyframes fadeIn {
@@ -11404,6 +11418,17 @@ a.text-dark:focus {
   padding-left: 10%;
 }
 
+.section1__img {
+  width: 74px;
+  height: 50px;
+}
+
+.section1__percent {
+  font-family: "Lato-Bold";
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
 .section1__subtitle {
   font-family: "PlayfairDisplay-Regular";
   text-transform: capitalize;
@@ -11466,7 +11491,7 @@ a.text-dark:focus {
   font-family: "Lato-Regular";
   position: absolute;
   top: 9%;
-  left: 47%;
+  left: 37%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 50%;
@@ -11756,15 +11781,25 @@ a.text-dark:focus {
 
 /*@media (max-width: 1920px) {*/
 
-@media (max-width: 1199.98px) {
-  .grafica2 {
-    height: 60vh;
+@media (min-width: 1920px) {
+  .grafica-full {
+    display: block;
   }
 
-  .bcg-parallax {
-    padding: 70px 0;
+  .grafica {
+    display: none;
   }
 }
+
+/*@include media-breakpoint-down(lg) {
+    .grafica2{
+        height: 60vh;
+    }
+
+    .bcg-parallax {
+        padding: 70px 0;
+    }
+}*/
 
 /*@media (max-width: 1024px) {
     .grafica2 {
@@ -11907,6 +11942,15 @@ a.text-dark:focus {
 
   .section1__description {
     font-size: 12px;
+  }
+
+  .section1__img {
+    width: 60px;
+    height: 42px;
+  }
+
+  .section1__percent {
+    font-size: 1.5em;
   }
 
   .seccion1-movil {
@@ -12304,6 +12348,7 @@ a.text-dark:focus {
 .como-trabajamos__risk__right-textOne-description {
   font-family: "Lato-Regular";
   color: #0B2131;
+  font-size: 1.2em;
 }
 
 .como-trabajamos__risk__right-text {
@@ -12781,6 +12826,18 @@ a.text-dark:focus {
   background-color: white;
 }
 
+.grafica-full__title {
+  font-family: "PlayfairDisplay-Bold";
+  color: #1A3042;
+  font-size: 3.5em;
+}
+
+.grafica-full__description {
+  font-family: "Lato-Regular";
+  color: #0B2131;
+  font-size: 20px;
+}
+
 .grafica__subtitle {
   font-family: "Lato-Regular";
   color: #0B2131;
@@ -12838,6 +12895,20 @@ a.text-dark:focus {
 *********************************************************************************
 */
 
+@media (min-width: 1920px) {
+  .grafica-full__title {
+    font-family: "PlayfairDisplay-Bold";
+    color: #1A3042;
+    font-size: 3.5em;
+  }
+
+  .grafica-full__description {
+    font-family: "Lato-Regular";
+    color: #0B2131;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .grafica-content2 {
     margin-top: -20%;
@@ -12864,6 +12935,10 @@ a.text-dark:focus {
 }
 
 @media (max-width: 767.98px) {
+  .grafica-full {
+    display: none;
+  }
+
   .grafica-content1 {
     margin-top: 0%;
   }
@@ -12961,7 +13036,7 @@ a.text-dark:focus {
   position: absolute;
   width: 50%;
   text-align: center;
-  bottom: 10px;
+  bottom: 20%;
 }
 
 .nosotros__oso3d__text {
@@ -13263,6 +13338,15 @@ a.text-dark:focus {
   background-color: #0B2131;
   height: 85vh;
   position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .como-iniciar__right {
@@ -13284,7 +13368,7 @@ a.text-dark:focus {
   position: absolute;
   right: -16px;
   list-style: none;
-  margin-top: 12%;
+  margin-top: -30%;
   font-family: "Lato-Bold";
 }
 
@@ -13317,7 +13401,7 @@ a.text-dark:focus {
 
 .como-iniciar__text {
   position: absolute;
-  bottom: 20%;
+  /* bottom: 20%;*/
   color: white;
   font-family: "PlayfairDisplay-Regular";
   padding: 0px 30px;

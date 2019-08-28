@@ -30,6 +30,20 @@
     background-color: white;
 }
 
+.grafica-full{
+    &__title{
+        font-family: 'PlayfairDisplay-Bold';
+        color: $blue3;
+        font-size: 3.5em;
+    }
+
+    &__description{
+        font-family: "Lato-Regular";
+        color: #0B2131;
+        font-size: 20px;
+    }
+}
+
 .grafica{
 
 
@@ -88,7 +102,21 @@
 */
 
 
-@include media-breakpoint-down(lg) {
+@media (min-width: 1920px) {
+
+    .grafica-full{
+        &__title{
+            font-family: 'PlayfairDisplay-Bold';
+            color: $blue3;
+            font-size: 3.5em;
+        }
+
+        &__description{
+            font-family: "Lato-Regular";
+            color: #0B2131;
+            font-size: 20px;
+        }
+    }
 
 }
 
@@ -119,7 +147,9 @@
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-down(sm){
-
+    .grafica-full{
+        display: none;
+    }
     .grafica-content1{
         margin-top: 0%;
     }

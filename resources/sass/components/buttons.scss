@@ -3,9 +3,23 @@
     color: $yellow-menu;
     border-color: $yellow-menu;
     border-radius: 0px;
+    z-index: 99999;
 }
 
 .btn-outline-secondary:hover {
     color: white;
-    background-color: $yellow-menu;
+    background-color: $yellow-menu !important;
+}
+
+.btn-outline-primary {
+    font-family: 'Lato-Regular';
+    color: $blue;
+    border-color: $blue;
+    border-radius: 0px;
+    z-index: 99999;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: $blue !important;
 }

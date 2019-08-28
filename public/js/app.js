@@ -1958,7 +1958,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ContactoComponent",
   data: function data() {
@@ -2049,29 +2048,30 @@ __webpack_require__.r(__webpack_exports__);
 
         if (vthis.step == 3) {
           vthis.fContact();
+        } else {
+          vthis.step = step;
+          vthis.error = false;
+          vthis.isSpiner = false;
         }
-
-        vthis.step = step;
-        vthis.error = false;
-        vthis.isSpiner = false;
       })["catch"](function (error) {
+        console.log(error);
         vthis.isSpiner = false;
         vthis.error = true;
       });
     },
     fContact: function fContact() {
-      vthis = this;
+      var vthis = this;
       vthis.isSpiner = true;
       axios.post('/sendContact', {
-        name: this.name,
-        mail: this.mail,
-        phone: this.phone,
-        message: this.message,
-        select1: this.select1,
-        select2: this.select2,
-        select3: this.select3,
-        select4: this.select4,
-        select5: this.select5
+        name: vthis.name,
+        mail: vthis.mail,
+        phone: vthis.phone,
+        message: vthis.message,
+        select1: vthis.select1,
+        select2: vthis.select2,
+        select3: vthis.select3,
+        select4: vthis.select4,
+        select5: vthis.select5
       }).then(function (response) {
         var result = response.data;
         vthis.isSpiner = false;
@@ -37377,14 +37377,14 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "como-iniciar" }, [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row mt-4" }, [
+      _c("div", { staticClass: "row mt-4 align-items-center" }, [
         _vm._m(0),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "col-12 col-md-12 col-lg-8 shadow-none shadow-lg como-iniciar__right"
+              "col-12 col-md-12 col-lg-8 shadow-md shadow-lg como-iniciar__right"
           },
           [
             _c("div", { staticClass: "container" }, [
@@ -37788,10 +37788,10 @@ var render = function() {
                                     "option",
                                     {
                                       attrs: {
-                                        value: "después de 2 años (largo plazo)"
+                                        value: "más de 2 años (largo plazo)"
                                       }
                                     },
-                                    [_vm._v("después de 2 años (largo plazo)")]
+                                    [_vm._v("más de 2 años (largo plazo)")]
                                   )
                                 ]
                               )
@@ -37845,15 +37845,15 @@ var render = function() {
                     : _vm._e()
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-12 text-center mt-5" }, [
-                    _vm.isSpiner
-                      ? _c("i", {
-                          staticClass: "fas fa-spinner fa-spin text-muted"
-                        })
-                      : _vm._e()
-                  ])
-                ]),
+                _c("div", { staticClass: "w-100" }),
+                _vm._v(" "),
+                _vm.isSpiner
+                  ? _c("div", { staticClass: "col-12 text-center mt-5" }, [
+                      _c("i", {
+                        staticClass: "fas fa-spinner fa-spin text-muted"
+                      })
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
                 _vm.error
                   ? _c("div", { staticClass: "col-12 col-md-10" }, [

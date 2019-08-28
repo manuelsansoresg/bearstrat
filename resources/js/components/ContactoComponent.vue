@@ -1,7 +1,7 @@
 <template>
     <div class="como-iniciar">
         <div class="container">
-            <div class="row mt-4">
+            <div class="row mt-4 align-items-center">
                 <div class="col-12 col-md-12  col-lg-4 como-iniciar__left shadow">
                     <ul class="como-iniciar__ul">
                         <li class="como-iniciar__circle como-iniciar__step  shadow item1">1</li>
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-8 shadow-none shadow-lg como-iniciar__right">
+                <div class="col-12 col-md-12 col-lg-8 shadow-md shadow-lg como-iniciar__right">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-10 col-lg-10">
@@ -80,7 +80,7 @@
                                             <select name="" class="form-control" v-model="select5">
                                                 <option value="6 meses (corto plazo)">6 meses (corto plazo)</option>
                                                 <option value="entre 6 meses y 2 años (medio plazo)">entre 6 meses y 2 años (medio plazo) </option>
-                                                <option value="después de 2 años (largo plazo)">después de 2 años (largo plazo)</option>
+                                                <option value="más de 2 años (largo plazo)">más de 2 años (largo plazo)</option>
                                             </select>
                                         </div>
                                     </form>
@@ -96,10 +96,9 @@
 
                             </div>
                             <!-- spinner-->
-                            <div class="row"  >
-                                <div class="col-12 text-center mt-5">
-                                    <i class="fas fa-spinner fa-spin text-muted" v-if="isSpiner"></i>
-                                </div>
+                            <div class="w-100"></div>
+                            <div class="col-12 text-center mt-5" v-if="isSpiner">
+                                <i class="fas fa-spinner fa-spin text-muted" ></i>
                             </div>
                             <!-- error -->
                             <div class="col-12 col-md-10" v-if="error">
@@ -212,14 +211,17 @@
                             $('.item2').removeClass('como-iniciar__step-out');
                             if(vthis.step == 3){
                                 vthis.fContact();
+                            }else{
+                                vthis.step = step;
+                                vthis.error = false;
+                                vthis.isSpiner = false;
                             }
-                            vthis.step = step;
-                            vthis.error = false;
-                            vthis.isSpiner = false;
+
 
 
                         })
                         .catch(function (error) {
+                            console.log(error);
                             vthis.isSpiner = false;
                             vthis.error = true;
 
@@ -227,14 +229,16 @@
                 },
 
                 fContact: function () {
-                    vthis = this;
+                    var vthis = this;
                     vthis.isSpiner = true;
                     axios.post
-                    ('/sendContact', {name: this.name, mail: this.mail, phone: this.phone, message: this.message,
-                                        select1: this.select1, select2: this.select2, select3: this.select3,
-                                        select4: this.select4, select5: this.select5
-                                    })
+                    ('/sendContact', {
+                        name: vthis.name, mail: vthis.mail, phone: vthis.phone, message: vthis.message,
+                        select1: vthis.select1, select2: vthis.select2, select3: vthis.select3,
+                        select4: vthis.select4, select5: vthis.select5
+                    })
                         .then(function (response) {
+
                             var result = response.data;
                             vthis.isSpiner = false;
                             window.location = '/gracias';
