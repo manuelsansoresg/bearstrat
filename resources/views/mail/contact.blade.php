@@ -27,29 +27,29 @@
                             <p class="lead">Datos del usuario: </p>
                             <p class="callout">
 
-                                Nombre:  {{$request['name']}}
+                                {{ trans('contacto.in1') }}:  {{$request['name']}}
                                 <br>
-                                Correo: {{$request['mail']}}
+                                {{ trans('contacto.in2') }}: {{$request['mail']}}
                                 <br>
-                                Teléfono: {{$request['phone']}}
+                                {{ trans('contacto.in3') }}: {{$request['phone']}}
                                 <br>
-                                Mensaje: {{$request['message']}}
+                                {{ trans('contacto.blbl7') }}: {{$request['message']}}
                             </p><!-- /Callout Panel -->
                             <p class="callout">
-                                ¿Cómo prefieres que te contactemos?
+                                {{ trans('contacto.blbl2') }}
                                 <br>
                                 {{$request['select1']}}
                                 <br><br>
-                                ¿Has invertido previamente?
+                                {{ trans('contacto.blbl3') }}
                                 <br>{{$request['select2']}}
                                 <br><br>
-                                ¿Por qué te gustaría invertir?
+                                {{ trans('contacto.blbl4') }}
                                 <br>{{$request['select3']}}
                                 <br><br>
-                                Tolerancia al riesgo
+                                {{ trans('contacto.blbl5') }}
                                 <br>{{$request['select4']}}
                                 <br><br>
-                                ¿En cuánto tiempo esperas obtener ganancias de acuerdo a tu inversión?
+                                {{ trans('contacto.blbl6') }}
                                 <br>{{$request['select5']}}
                             </p>
                             <p>

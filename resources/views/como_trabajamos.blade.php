@@ -1,5 +1,8 @@
 @extends('layouts.default')
 
+
+@section('title', trans('menu.como'))
+
 @section('content')
     <div class="como-trabajamos">
         <div class="container">

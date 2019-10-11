@@ -11252,6 +11252,14 @@ a.text-dark:focus {
 
 /*/playfair*/
 
+@font-face {
+  font-family: "Nilland";
+  src: url("/fonts/Nilland/Nilland.eot");
+  src: url("/fonts/Nilland/Nilland.eot?#iefix") format("embedded-opentype"), url("/fonts/Nilland/Nilland.woff2") format("woff2"), url("/fonts/Nilland/Nilland.woff") format("woff"), url("/fonts/Nilland/Nilland.ttf") format("truetype"), url("/fonts/Nilland/Nilland.svg#Nilland") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .navbar {
   z-index: 9;
 }
@@ -11303,12 +11311,21 @@ a.text-dark:focus {
 }
 
 @media (max-width: 767.98px) {
+  .hr-meu-movil {
+    border: solid 0.5px white;
+  }
+
+  .nav-item {
+    font-size: 1em;
+  }
+
   .navbar-nav {
     text-align: center;
   }
 
   .nav-link-lang {
-    padding: 0px !important;
+    padding: 0.5rem 0rem !important;
+    margin-left: 0px !important;
   }
 }
 
@@ -11401,6 +11418,10 @@ a.text-dark:focus {
   display: none;
 }
 
+.section2-movil {
+  display: none;
+}
+
 .video {
   width: 100%;
   height: 100vh;
@@ -11420,7 +11441,7 @@ a.text-dark:focus {
 
 .section1__img {
   width: 74px;
-  height: 50px;
+  height: 57px;
 }
 
 .section1__percent {
@@ -11458,9 +11479,28 @@ a.text-dark:focus {
 }
 
 .section2__title {
-  font-family: "Lato-Regular";
+  font-family: "Lato-Bold";
   color: #0B2131;
-  font-size: 55px;
+  font-size: 48px;
+}
+
+.section2__title2 {
+  font-family: "Lato-Regular";
+  color: #DBAD46;
+  font-size: 0.7em;
+}
+
+.section2__title3 {
+  font-family: "Lato-Regular";
+  color: #DBAD46;
+  font-size: 0.7em;
+}
+
+.section2__ul {
+  margin-top: -20px;
+  padding-left: 20px;
+  color: #0B2131;
+  font-size: 0.7em;
 }
 
 .section2__subtitle {
@@ -11789,6 +11829,14 @@ a.text-dark:focus {
   .grafica {
     display: none;
   }
+
+  .section2__title2 {
+    font-size: 20px;
+  }
+
+  .section2__ul {
+    font-size: 20px;
+  }
 }
 
 /*@include media-breakpoint-down(lg) {
@@ -11953,6 +12001,10 @@ a.text-dark:focus {
     font-size: 1.5em;
   }
 
+  .section2-movil {
+    display: block;
+  }
+
   .seccion1-movil {
     display: block;
     background-color: #0B2131;
@@ -11990,7 +12042,7 @@ a.text-dark:focus {
   .grafica-movil__title {
     font-family: "PlayfairDisplay-Bold";
     color: #1A3042;
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   .grafica-movil__description {
@@ -12009,7 +12061,15 @@ a.text-dark:focus {
   }
 
   .section2__title {
-    font-size: 1.2em;
+    font-size: 2em;
+  }
+
+  .section2__title2 {
+    font-size: 0.9em;
+  }
+
+  .section2__ul {
+    font-size: 0.9em;
   }
 
   .section2__subtitle {
@@ -12040,7 +12100,7 @@ a.text-dark:focus {
   }
 
   .landing__conocenos-subtitle {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 
   .content-wrapper {
@@ -12203,6 +12263,8 @@ a.text-dark:focus {
   font-family: "Lato-Regular";
   color: #DBAD46;
   padding: 10px 0px;
+  position: relative;
+  z-index: 99;
 }
 
 /******************************************************************************
@@ -12248,7 +12310,7 @@ a.text-dark:focus {
   font-family: "Lato-Regular";
   font-size: 1.3em;
   color: white;
-  margin-top: -11%;
+  margin-top: -9%;
   width: 36%;
 }
 
@@ -12526,7 +12588,7 @@ a.text-dark:focus {
 
 @media (max-width: 767.98px) {
   .como-trabajamos {
-    height: 62vh;
+    height: 67vh;
   }
 
   .como-trabajamos__footer {
@@ -12547,9 +12609,9 @@ a.text-dark:focus {
   }
 
   .como-trabajamos__description {
-    margin-top: -37%;
+    margin-top: -28%;
     width: 92%;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .como-trabajamos__risk-desktop {
@@ -12565,6 +12627,8 @@ a.text-dark:focus {
     font-family: "Lato-Bold";
     color: #DBAD46;
     padding-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
   }
 
   .como-trabajamos__risk {
@@ -12642,157 +12706,11 @@ a.text-dark:focus {
   }
 }
 
-/*
-@media (max-width: 4096px) {
-    .como-trabajamos{
-        height: 79vh;
-        &__description{
-            width: 57%;
-        }
-
-        &__text {
-            margin-top: 7%;
-        }
-    }
+@media screen and (device-aspect-ratio: 40/71) {
+  .como-trabajamos {
+    height: 82vh;
+  }
 }
-
-@media (max-width: 1920px) {
-    .como-trabajamos{
-        height: 79vh;
-        &__text {
-            margin-top: 7%;
-        }
-    }
-
-}
-
-
-//tablets
-@media (max-width: 768px) {
-    .como-trabajamos{
-        height: 40vh;
-        &__description {
-            margin-top: -15%;
-            width: 80%;
-            font-size: 1em;
-        }
-        &__risk{
-            &__left{
-                width: 129%;
-                padding-left: 0%;
-                height: 43vh;
-            }
-            &__right-text{
-                margin-left: 4%;
-                width: 45%;
-                font-size: 1.5em;
-            }
-            &__right-textOne {
-                width: 100%;
-            }
-            &__right-textOne-title{
-                font-size: 2em;
-                text-transform: uppercase;
-            }
-
-            &__right-textOne-subtitle{
-                font-size: 2em;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    #waves {
-        margin-top: -22%;
-        width: 108% !important;
-    }
-}
-
-//celular
-@media (max-width: 576px) {
-    .como-trabajamos{
-        height: 60vh;
-        &__title{
-            font-size: 3em;
-        }
-        &__subtitle{
-            font-size: 4em;
-        }
-        &__description {
-            margin-top: -37%;
-            width: 92%;
-            font-size: 1em;
-        }
-        &__risk{
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            &__left{
-                height: 38vh;
-            }
-            &__right-textOne-description{
-                color: white;
-            }
-            &__right-text{
-                margin-left: 0%;
-                width: 100%;
-                margin-top: 45px;
-                font-size: 1em;
-                padding: 0px 10px;
-            }
-        }
-    }
-
-
-    .riskManagment{
-        &__text{
-            margin-left: 0px;
-            margin-top: -82%;
-        }
-
-        &__title{
-            font-family: 'Lato-Regular';
-            font-size: 3em;
-            text-transform: uppercase;
-            color: $yellow-menu;
-        }
-
-        &__description{
-            font-family: 'Lato-Regular';
-            color:white;
-        }
-
-        &__text-right{
-            margin-top: -60%;
-            font-size: 1em;
-            color: white;
-            padding: 0px 30px;
-            left: 0px;
-        }
-
-        &__subtitle{
-            font-family: "Lato-Black";
-            font-size: 3em;
-            text-transform: uppercase;
-            color: $yellow-menu;
-        }
-
-        &__right{
-            margin-left: -8px;
-            img{
-                height: 268px;
-                width: 100%;
-                margin-left: 8px
-            }
-        }
-    }
-
-    #waves {
-        margin-top: -45%;
-
-    }
-}*/
 
 #pinContainer {
   width: 100%;
@@ -13245,20 +13163,21 @@ a.text-dark:focus {
   }
 
   .nosotros__oso3d {
-    height: 40vh;
+    height: 35vh;
   }
 
   .nosotros__oso3d__img {
-    width: 100%;
+    width: 449px;
   }
 
   .nosotros__oso3d__content-text {
+    bottom: 12%;
     width: 90%;
     color: white;
   }
 
   .nosotros__oso3d__text {
-    font-size: 12px;
+    font-size: 1.2em;
   }
 
   .nosotros__hero {
@@ -13307,6 +13226,10 @@ a.text-dark:focus {
             flex-direction: column;
   }
 
+  .nosotros__grafica2 .btn-outline-primary {
+    /*  padding: 1.8em 0.75rem !important; */
+  }
+
   .nosotros__grafica2__image {
     display: none;
   }
@@ -13320,7 +13243,7 @@ a.text-dark:focus {
   .nosotros__grafica2__subtitle {
     margin-left: 0;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-top: -4px !important;
   }
 }
@@ -13332,6 +13255,11 @@ a.text-dark:focus {
 .como-iniciar label {
   font-family: "Lato-Bold";
   color: #939393;
+}
+
+.como-iniciar__desktop {
+  display: -webkit-box;
+  display: flex;
 }
 
 .como-iniciar__left {
@@ -13431,6 +13359,10 @@ a.text-dark:focus {
 */
 
 @media (max-width: 991.98px) {
+  .como-iniciar__desktop {
+    display: none;
+  }
+
   .como-iniciar__left {
     height: 20vh;
   }
@@ -13457,20 +13389,25 @@ a.text-dark:focus {
             justify-content: space-between;
     bottom: -33%;
   }
+
+  .como-iniciar .input-area {
+    height: 200px;
+  }
 }
 
 @media (max-width: 767.98px) {
   .como-iniciar__left {
     height: 43vh;
+    display: block;
   }
 
   .como-iniciar__right {
-    height: 89vh;
+    height: 100vh;
   }
 
   .como-iniciar__text {
     bottom: 4%;
-    padding: 0px;
+    padding: 0px 20px;
   }
 
   .como-iniciar__text-description {
@@ -13486,10 +13423,23 @@ a.text-dark:focus {
             justify-content: space-between;
     bottom: -22%;
   }
+
+  .como-iniciar__right-buttons {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 2px;
+    right: 0px;
+    padding: 0px 25px;
+  }
 }
 
 .thankyou {
   min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .thankyou__content {
@@ -13522,6 +13472,22 @@ a.text-dark:focus {
 .thankyou__text {
   font-family: "PlayfairDisplay-Regular";
   color: white;
+}
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+@media (max-width: 767.98px) {
+  .thankyou {
+    display: block;
+    min-height: auto;
+  }
+
+  .thankyou__subtitle {
+    line-height: 50px;
+  }
 }
 
 body {

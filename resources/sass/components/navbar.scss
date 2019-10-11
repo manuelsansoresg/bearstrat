@@ -59,10 +59,17 @@
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-down(sm){
+    .hr-meu-movil{
+        border: solid 0.5px white;
+    }
+    .nav-item {
+        font-size: 1em;
+    }
     .navbar-nav{
         text-align: center;
     }
     .nav-link-lang{
-        padding: 0px !important;
+        padding: 0.5rem 0rem !important;
+        margin-left: 0px !important;
     }
 }

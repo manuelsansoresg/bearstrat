@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Nilland';
+    src: url('Nilland.eot');
+    src: url('Nilland.eot?#iefix') format('embedded-opentype'),
+        url('Nilland.woff2') format('woff2'),
+        url('Nilland.woff') format('woff'),
+        url('Nilland.ttf') format('truetype'),
+        url('Nilland.svg#Nilland') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -2,6 +2,10 @@
     display: none;
 }
 
+.section2-movil{
+    display: none;
+}
+
 .video{
     width: 100%;
     height: 100vh;
@@ -18,7 +22,7 @@
     padding-left: 10%;
     &__img{
         width: 74px;
-        height: 50px;
+        height: 57px;
     }
 
     &__percent{
@@ -54,10 +58,30 @@
 .section2{
   padding-left: 10%;
   &__title{
-    font-family: 'Lato-Regular';
+    font-family: 'Lato-Bold';
     color: $blue;
-    font-size: 55px;
+    font-size: 48px;
   }
+
+  &__title2{
+    font-family: 'Lato-Regular';
+    color: $yellow-menu;
+    font-size: 0.7em;
+  }
+
+  &__title3{
+        font-family: 'Lato-Regular';
+        color: $yellow-menu;
+        font-size: 0.7em;
+  }
+
+  &__ul{
+    margin-top: -20px;
+    padding-left: 20px;
+    color: $blue;
+    font-size: 0.7em;
+  }
+
   &__subtitle{
     font-family: 'PlayfairDisplay-Regular';
     color: $yellow-menu;
@@ -384,6 +408,14 @@
     .grafica{
         display: none;
     }
+    .section2{
+        &__title2{
+            font-size: 20px;
+        }
+        &__ul{
+            font-size: 20px;
+        }
+    }
 }
 /*@include media-breakpoint-down(lg) {
     .grafica2{
@@ -537,6 +569,12 @@
         }
     }
 
+    .section2-movil{
+        display: block;
+
+    }
+
+
     .seccion1-movil{
         display: block;
         background-color: $blue;
@@ -567,7 +605,7 @@
         &__title{
             font-family: "PlayfairDisplay-Bold";
             color: $blue3;
-            font-size: 2em;
+            font-size: 2.5em;
         }
         &__description{
             font-family: "Lato-Regular";
@@ -583,7 +621,13 @@
     .section2{
         padding-left: 5px;
         &__title{
-            font-size: 1.2em;
+            font-size: 2em;
+        }
+        &__title2{
+            font-size: 0.9em;
+        }
+        &__ul{
+            font-size: 0.9em;
         }
         &__subtitle{
             font-size: 1.2em;
@@ -611,7 +655,7 @@
             font-size: 1em;
         }
         &__conocenos-subtitle{
-            font-size: 1.2em;
+            font-size: 2em;
         }
     }
 

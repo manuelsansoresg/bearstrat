@@ -1,7 +1,7 @@
 <template>
     <div class="como-iniciar">
         <div class="container">
-            <div class="row mt-4 align-items-center">
+            <div class="row mt-0 mt-md-4 align-items-center ">
                 <div class="col-12 col-md-12  col-lg-4 como-iniciar__left shadow">
                     <ul class="como-iniciar__ul">
                         <li class="como-iniciar__circle como-iniciar__step  shadow item1">1</li>
@@ -9,10 +9,10 @@
                         <li class="como-iniciar__circle como-iniciar__step-out shadow item3">3</li>
                     </ul>
                     <div class="como-iniciar__text">
-                        <div class="como-iniciar__text-title">¿CÓMO</div>
-                        <div class="como-iniciar__text-subtitle">INICIAR?</div>
+                        <div class="como-iniciar__text-title">{{ section1_title }}</div>
+                        <div class="como-iniciar__text-subtitle">{{ section1_title2 }}</div>
                         <div class="como-iniciar__text-description">
-                            Queremos conocer tus objetivos y convertirnos en tus aliados. Llena los datos del formulario para empezar a trabajar juntos.
+                            {{ section1_description }}
                         </div>
                     </div>
                 </div>
@@ -21,98 +21,158 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-10 col-lg-10">
                                 <div class="step mt-5" v-if="step == 1">
-                                    <form id="form-step1">
+                                    <form id="form-step1" autocomplete="off">
                                         <div class="form-group">
-                                            <label>*Nombre</label>
+                                            <label>*{{ in_1 }}</label>
                                             <input type="text" class="form-control" name="name" v-model="name">
                                         </div>
                                         <div class="form-group">
-                                            <label>*Mail</label>
+                                            <label>*{{ in_2 }}</label>
                                             <input type="email" class="form-control" name="mail" v-model="mail">
                                         </div>
                                         <div class="form-group">
-                                            <label>Teléfono </label>
+                                            <label>{{ in_3 }} </label>
                                             <input type="text" class="form-control" name="phone" v-model="phone">
                                         </div>
                                     </form>
+                                    <!-- spinner-->
+                                    <div class="w-100"></div>
+                                    <div class="col-12 text-center mt-5" v-if="isSpiner">
+                                        <i class="fas fa-spinner fa-spin text-muted" ></i>
+                                    </div>
+                                    
+                                    <div class="w-100 pb-1"></div>   
+
+                                    <!-- error -->
+                                        <div class="col-12 col-md-10" v-if="error">
+                                            <small class="text-danger">{{ legend_error }}</small>
+                                        </div>
+                                    <!-- /error -->  
+                                    <div class="w-100 pb-4"></div>             
+                                    <div class="row mt-5">
+                                            <div class="col-12">
+                                                <div class="como-iniciar__right-buttons mt-5">
+                                                    <button @click="fBack" class="btn btn-primary mr-3 mt-5" v-if="step != 1"> <i class="fas fa-chevron-left"></i> {{ btnprevious }} </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step != 3"> {{ btnnext }} <i class="fas fa-chevron-right"></i> </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step == 3"> {{ btnsend }} <i class="fas fa-chevron-right"></i> </button>
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
 
                                 <div class="step mt-5 mt-md-4" v-if="step == 2" data-aos="fade-right">
                                     <form id="form-step2">
                                         <div class="form-group">
-                                            <label>¿Cómo prefieres que te contactemos?</label>
+                                            <label>{{ blbl2 }}</label>
                                             <select name="" class="form-control" v-model="select1">
-                                                <option value="Correo">Correo</option>
-                                                <option value="Llamada">Llamada</option>
-                                                <option value="Whatsapp">Whatsapp</option>
+                                                <option :value=" blbl2_1 ">{{ blbl2_1 }}</option>
+                                                <option :value=" blbl2_2 ">{{ blbl2_2 }}</option>
+                                                <option :value=" blbl2_3 ">{{ blbl2_3 }}</option>
                                             </select>
                                         </div>
 
                                         <div class="form-group">
-                                            <label>¿Has invertido previamente?</label>
+                                            <label>{{ blbl3 }}</label>
                                             <select name="" class="form-control" v-model="select2">
-                                                <option value="Sí, más de una vez">Sí, más de una vez</option>
-                                                <option value="Sólo una vez">Sólo una vez </option>
-                                                <option value="No">No</option>
+                                                <option :value="blbl3_1">{{ blbl3_1 }}</option>
+                                                <option :value="blbl3_2">{{ blbl3_2 }} </option>
+                                                <option :value="blbl3_3">{{ blbl3_3 }}</option>
                                             </select>
                                         </div>
 
                                         <div class="form-group">
-                                            <label>¿Por qué te gustaría invertir?</label>
+                                            <label>{{ blbl4 }}</label>
                                             <select name="" class="form-control" v-model="select3">
-                                                <option value="Ganancias">Ganancias</option>
-                                                <option value="Crecimiento">Crecimiento </option>
-                                                <option value="Especulación">Especulación</option>
-                                                <option value="No sé">No sé</option>
+                                                <option :value="blbl4_1">{{ blbl4_1 }}</option>
+                                                <option :value="blbl4_2">{{ blbl4_2 }} </option>
+                                                <option :value="blbl4_3">{{ blbl4_3 }}</option>
+                                                <option :value="blbl4_4">{{ blbl4_4 }}</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Tolerancia al riesgo</label>
+                                            <label>{{ blbl5 }}</label>
                                             <select name="" class="form-control" v-model="select4">
-                                                <option value="Conservadora">Conservadora</option>
-                                                <option value="moderada">moderada </option>
-                                                <option value="agresiva">agresiva</option>
-                                                <option value="No sé">no sé</option>
+                                                <option :value="blbl5_1">{{ blbl5_1 }}</option>
+                                                <option :value="blbl5_2">{{ blbl5_2 }} </option>
+                                                <option :value="blbl5_3">{{ blbl5_3 }}</option>
+                                                <option :value="blbl5_4">{{ blbl5_4 }}</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>¿En cuánto tiempo esperas obtener ganancias de acuerdo a tu inversión?</label>
+                                            <label>{{ blbl6 }}</label>
                                             <select name="" class="form-control" v-model="select5">
-                                                <option value="6 meses (corto plazo)">6 meses (corto plazo)</option>
-                                                <option value="entre 6 meses y 2 años (medio plazo)">entre 6 meses y 2 años (medio plazo) </option>
-                                                <option value="más de 2 años (largo plazo)">más de 2 años (largo plazo)</option>
+                                                <option :value="blbl6_1">{{ blbl6_1 }}</option>
+                                                <option :value="blbl6_2">{{ blbl6_2 }} </option>
+                                                <option :value="blbl6_3">{{ blbl6_3 }}</option>
                                             </select>
                                         </div>
                                     </form>
+                                     <!-- spinner-->
+                                    <div class="w-100"></div>
+                                    <div class="col-12 text-center mt-5" v-if="isSpiner">
+                                        <i class="fas fa-spinner fa-spin text-muted" ></i>
+                                    </div>
+                                    
+                                    <div class="w-100 pb-4"></div>   
+
+                                    <!-- error -->
+                                        <div class="col-12 col-md-10" v-if="error">
+                                            <small class="text-danger">{{ legend_error }}</small>
+                                        </div>
+                                    <!-- /error -->  
+                                    <div class="w-100 pb-4 pb-md-1"></div>             
+                                    <div class="row mt-5">
+                                            <div class="col-12">
+                                                <div class="como-iniciar__right-buttons mt-5">
+                                                    <button @click="fBack" class="btn btn-primary mr-3 mt-5" v-if="step != 1"> <i class="fas fa-chevron-left"></i> {{ btnprevious }} </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step != 3"> {{ btnnext }} <i class="fas fa-chevron-right"></i> </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step == 3"> {{ btnsend }} <i class="fas fa-chevron-right"></i> </button>
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
                                 <div class="step mt-5" v-if="step == 3" data-aos="fade-right">
                                     <form id="form-step3">
                                         <div class="form-group">
-                                            <label>*Mensaje </label>
-                                            <textarea class="form-control" name="message"  v-model="message" cols="30" rows="10"></textarea>
+                                            <label>*{{  blbl7 }} </label>
+                                            <textarea class="form-control input-area" name="message"  v-model="message" cols="30" rows="10"></textarea>
                                         </div>
                                     </form>
+                                     <!-- spinner-->
+                                    <div class="w-100"></div>
+                                    <div class="col-12 text-center mt-5" v-if="isSpiner">
+                                        <i class="fas fa-spinner fa-spin text-muted" ></i>
+                                    </div>
+                                    
+                                    <div class="w-100 pb-4"></div>   
+
+                                    <!-- error -->
+                                        <div class="col-12 col-md-10" v-if="error">
+                                            <small class="text-danger">{{ legend_error }}</small>
+                                        </div>
+                                    <!-- /error -->  
+                                    <div class="w-100 pb-4 pb-md-1"></div>             
+                                    <div class="row mt-5">
+                                            <div class="col-12">
+                                                <div class="como-iniciar__right-buttons mt-5">
+                                                    <button @click="fBack" class="btn btn-primary mr-3 mt-5" v-if="step != 1"> <i class="fas fa-chevron-left"></i> {{ btnprevious }} </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step != 3"> {{ btnnext }} <i class="fas fa-chevron-right"></i> </button>
+                                                    <button @click="fStep" class="btn btn-primary mt-5" v-if="step == 3"> {{ btnsend }} <i class="fas fa-chevron-right"></i> </button>
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
 
                             </div>
-                            <!-- spinner-->
-                            <div class="w-100"></div>
-                            <div class="col-12 text-center mt-5" v-if="isSpiner">
-                                <i class="fas fa-spinner fa-spin text-muted" ></i>
-                            </div>
-                            <!-- error -->
-                            <div class="col-12 col-md-10" v-if="error">
-                                <small class="text-danger">Los campos marcados con * son obligatorios</small>
-                            </div>
-                            <!-- /error -->
+                           
+                          
+                            <div class="d-block d-md-none w-100 py-4"></div>
+                            
                         </div>
                     </div>
-                    <div class="como-iniciar__right-buttons">
-                        <button @click="fBack" class="btn btn-primary mr-3" v-if="step != 1"> <i class="fas fa-chevron-left"></i> Anterior </button>
-                        <button @click="fStep" class="btn btn-primary" v-if="step != 3"> Siguiente <i class="fas fa-chevron-right"></i> </button>
-                        <button @click="fStep" class="btn btn-primary" v-if="step == 3"> Enviar <i class="fas fa-chevron-right"></i> </button>
-                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
@@ -121,17 +181,28 @@
 <script>
         export default {
             name: "ContactoComponent",
+            props: ['section1_title', 'section1_title2', 'section1_description',
+                    'in_1', 'in_2', 'in_3',
+                    'blbl2', 'blbl2_1', 'blbl2_2','blbl2_3',
+                    'blbl3', 'blbl3_1', 'blbl3_2','blbl3_3',
+                    'blbl4', 'blbl4_1', 'blbl4_2','blbl4_3','blbl4_4',
+                    'blbl5', 'blbl5_1', 'blbl5_2','blbl5_3','blbl5_4',
+                    'blbl6', 'blbl6_1', 'blbl6_2','blbl6_3',
+                    'blbl7',
+                    'btnnext' , 'btnprevious' , 'btnsend',
+                    'legend_error'
+                    ],
             data: function() {
                 return  {
                     step: 1,
                     name: '',
                     mail:  '',
                     phone: '',
-                    select1: 'Correo',
-                    select2: 'Sí, más de una vez',
-                    select3: 'Ganancias',
-                    select4: 'Conservadora',
-                    select5: '6 meses (corto plazo)',
+                    select1: this.blbl2_1,
+                    select2: this.blbl3_1,
+                    select3: this.blbl4_1,
+                    select4: this.blbl5_1,
+                    select5: this.blbl6_1,
                     message: '',
                     error: false,
                     isSpiner: false

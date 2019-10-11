@@ -4,6 +4,9 @@
         font-family: 'Lato-Bold';
         color: $gray2;
     }
+    &__desktop{
+        display: flex;
+    }
     &__left{
         background-color: $blue;
         height: 85vh;
@@ -101,6 +104,9 @@
 
 @include media-breakpoint-down(md) {
     .como-iniciar{
+        &__desktop{
+            display: none;
+        }
         &__left{
             height: 20vh;
 
@@ -123,6 +129,11 @@
             justify-content: space-between;
             bottom: -33%;
         }
+
+        .input-area{
+            height: 200px;
+        }
+
     }
 }
 
@@ -130,16 +141,19 @@
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-down(sm){
     .como-iniciar{
+
         &__left{
             height: 43vh;
+            display: block;
 
         }
         &__right{
-            height: 89vh;
+            height: 100vh;
+
         }
         &__text{
             bottom: 4%;
-            padding: 0px;
+            padding: 0px 20px;
         }
         &__text-description{
             width: 100%;
@@ -151,6 +165,14 @@
             display: flex;
             justify-content: space-between;
             bottom: -22%;
+        }
+        &__right-buttons{
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            bottom: 2px;
+            right:0px;
+            padding: 0px 25px;
         }
     }
 }

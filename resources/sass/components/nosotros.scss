@@ -256,17 +256,17 @@
         }
 
         &__oso3d{
-            height: 40vh;
+            height: 35vh;
             &__img{
-                width: 100%;
+                width: 449px;
             }
             &__content-text{
-
+                bottom: 12%;
                 width: 90%;
                 color: white;
             }
             &__text{
-                font-size: 12px;
+                font-size: 1.2em;
             }
         }
 
@@ -305,6 +305,9 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            .btn-outline-primary{
+               /*  padding: 1.8em 0.75rem !important; */
+            }
             &__image{
                 display: none;
             }
@@ -316,7 +319,7 @@
             &__subtitle{
                 margin-left: 0;
                 text-align: center;
-                font-size: 2em;
+                font-size: 1.8em;
                 margin-top: -4px !important;
             }
 

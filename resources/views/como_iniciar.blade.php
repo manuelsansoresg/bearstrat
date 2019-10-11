@@ -1,7 +1,7 @@
 @extends('layouts.default')
-
+@section('title', trans('menu.iniciar'))
 @section('content')
 <div id="app">
-    <contacto-component></contacto-component>
+    <contacto-component section1_title="{{ trans('contacto.section1-title') }}" section1_title2="{{ trans('contacto.section1-title2') }}" section1_description="{{ trans('contacto.section1-description') }}" in_1="{{ trans('contacto.in1') }}" in_2="{{ trans('contacto.in2') }}" in_3="{{ trans('contacto.in3') }}" blbl2="{{ trans('contacto.blbl2') }}" blbl2_1="{{ trans('contacto.blbl2_1') }}" blbl2_2="{{ trans('contacto.blbl2_2') }}" blbl2_3="{{ trans('contacto.blbl2_3') }}" blbl3="{{ trans('contacto.blbl3') }}" blbl3_1="{{ trans('contacto.blbl3_1') }}" blbl3_2="{{ trans('contacto.blbl3_2') }}" blbl3_3="{{ trans('contacto.blbl3_3') }}" blbl4="{{ trans('contacto.blbl4') }}" blbl4_1="{{ trans('contacto.blbl4_1') }}" blbl4_2="{{ trans('contacto.blbl4_2') }}" blbl4_3="{{ trans('contacto.blbl4_3') }}" blbl4_4="{{ trans('contacto.blbl4_4') }}" blbl5="{{ trans('contacto.blbl5') }}" blbl5_1="{{ trans('contacto.blbl5_1') }}" blbl5_2="{{ trans('contacto.blbl5_2') }}" blbl5_3="{{ trans('contacto.blbl5_3') }}" blbl5_4="{{ trans('contacto.blbl5_4') }}" blbl6="{{ trans('contacto.blbl6') }}" blbl6_1="{{ trans('contacto.blbl6_1') }}" blbl6_2="{{ trans('contacto.blbl6_2') }}" blbl6_3="{{ trans('contacto.blbl6_3') }}" blbl7="{{ trans('contacto.blbl7') }}" btnnext="{{ trans('contacto.btnnext') }}" btnprevious="{{ trans('contacto.btnprevious') }}" btnsend="{{ trans('contacto.btnsend') }}" legend_error="{{ trans('contacto.legend_error') }}"></contacto-component>
 </div>
 @endsection

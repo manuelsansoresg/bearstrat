@@ -8,7 +8,7 @@
                 <table>
                     <tr>
                         <td style="background-color: #002C41">
-
+                            <img src="{{ asset('/img/BEARSTRAT.png') }}" alt="">
 
                         </td>
                     </tr>

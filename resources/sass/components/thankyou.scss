@@ -1,6 +1,7 @@
 .thankyou{
     min-height: 100vh;
-
+    display: flex;
+    align-items: center;
     &__content{
         background-color: $blue;
         min-height: 85vh;
@@ -25,5 +26,32 @@
     &__text{
         font-family: 'PlayfairDisplay-Regular';
         color: white;
+    }
+}
+
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+
+
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .thankyou{
+        display: block;
+        min-height: auto;
+        &__subtitle{
+            line-height: 50px;
+        }
     }
 }

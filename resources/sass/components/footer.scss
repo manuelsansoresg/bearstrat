@@ -3,6 +3,9 @@
     font-family: 'Lato-Regular';
     color: $yellow-menu;
     padding: 10px 0px;
+    position: relative;
+    z-index: 99;
+
 }
 
 
@@ -17,5 +20,6 @@
     .footer{
         padding: 10px 11px;
         text-align: center;
+
     }
 }

@@ -23,7 +23,7 @@ class StepController extends Controller
 
     public function sendContact(Request $request)
     {
-        Mail::to('contacto@bearstrat.com')->send(new ContactMail($request->all()));
+        Mail::to('rmelendez@bearstrat.com')->send(new ContactMail($request->all()));
         return response()->json('ok');
     }
 }

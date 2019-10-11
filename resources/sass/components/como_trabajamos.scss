@@ -27,7 +27,7 @@
         font-family: 'Lato-Regular';
         font-size: 1.3em;
         color: white;
-        margin-top: -11%;
+        margin-top: -9%;
         width: 36%;
     }
 
@@ -289,10 +289,11 @@
 }
 
 
+
 // Small devices (landscape phones, 576px and up)
-@include media-breakpoint-down(sm){
+@include media-breakpoint-down(sm) {
     .como-trabajamos{
-        height: 62vh;
+        height: 67vh;
         &__footer{
             display: none;
         }
@@ -309,9 +310,9 @@
             margin-top: -15px;
         }
         &__description {
-            margin-top: -37%;
+            margin-top: -28%;
             width: 92%;
-            font-size: 1em;
+            font-size: 1.2em;
         }
 
         &__risk-desktop{
@@ -325,6 +326,9 @@
                 font-family: 'Lato-Bold';
                 color: $yellow-menu;
                 padding-bottom: 10px;
+                font-size: 1.2em;
+                text-align: center;
+
             }
         }
 
@@ -408,155 +412,10 @@
     }
 }
 
-/*
-@media (max-width: 4096px) {
-    .como-trabajamos{
-        height: 79vh;
-        &__description{
-            width: 57%;
-        }
 
-        &__text {
-            margin-top: 7%;
-        }
+@media screen and (device-aspect-ratio: 40/71)
+{
+    .como-trabajamos{
+        height: 82vh;
     }
 }
-
-@media (max-width: 1920px) {
-    .como-trabajamos{
-        height: 79vh;
-        &__text {
-            margin-top: 7%;
-        }
-    }
-
-}
-
-
-//tablets
-@media (max-width: 768px) {
-    .como-trabajamos{
-        height: 40vh;
-        &__description {
-            margin-top: -15%;
-            width: 80%;
-            font-size: 1em;
-        }
-        &__risk{
-            &__left{
-                width: 129%;
-                padding-left: 0%;
-                height: 43vh;
-            }
-            &__right-text{
-                margin-left: 4%;
-                width: 45%;
-                font-size: 1.5em;
-            }
-            &__right-textOne {
-                width: 100%;
-            }
-            &__right-textOne-title{
-                font-size: 2em;
-                text-transform: uppercase;
-            }
-
-            &__right-textOne-subtitle{
-                font-size: 2em;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    #waves {
-        margin-top: -22%;
-        width: 108% !important;
-    }
-}
-
-//celular
-@media (max-width: 576px) {
-    .como-trabajamos{
-        height: 60vh;
-        &__title{
-            font-size: 3em;
-        }
-        &__subtitle{
-            font-size: 4em;
-        }
-        &__description {
-            margin-top: -37%;
-            width: 92%;
-            font-size: 1em;
-        }
-        &__risk{
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            &__left{
-                height: 38vh;
-            }
-            &__right-textOne-description{
-                color: white;
-            }
-            &__right-text{
-                margin-left: 0%;
-                width: 100%;
-                margin-top: 45px;
-                font-size: 1em;
-                padding: 0px 10px;
-            }
-        }
-    }
-
-
-    .riskManagment{
-        &__text{
-            margin-left: 0px;
-            margin-top: -82%;
-        }
-
-        &__title{
-            font-family: 'Lato-Regular';
-            font-size: 3em;
-            text-transform: uppercase;
-            color: $yellow-menu;
-        }
-
-        &__description{
-            font-family: 'Lato-Regular';
-            color:white;
-        }
-
-        &__text-right{
-            margin-top: -60%;
-            font-size: 1em;
-            color: white;
-            padding: 0px 30px;
-            left: 0px;
-        }
-
-        &__subtitle{
-            font-family: "Lato-Black";
-            font-size: 3em;
-            text-transform: uppercase;
-            color: $yellow-menu;
-        }
-
-        &__right{
-            margin-left: -8px;
-            img{
-                height: 268px;
-                width: 100%;
-                margin-left: 8px
-            }
-        }
-    }
-
-    #waves {
-        margin-top: -45%;
-
-    }
-}*/
-

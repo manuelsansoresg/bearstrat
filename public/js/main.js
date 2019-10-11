@@ -455,7 +455,7 @@ __webpack_require__(/*! ./components/nosotros */ "./resources/js/components/noso
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bearstrat\resources\js\main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! c:\laragon\www\bearstrat\resources\js\main.js */"./resources/js/main.js");
 
 
 /***/ })
